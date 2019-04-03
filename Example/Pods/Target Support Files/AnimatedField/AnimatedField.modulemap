@@ -1,0 +1,6 @@
+framework module AnimatedField {
+  umbrella header "AnimatedField-umbrella.h"
+
+  export *
+  module * { export * }
+}
