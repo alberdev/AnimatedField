@@ -7,36 +7,44 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'AnimatedField'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of AnimatedField.'
+    
+# ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+s.platform = :ios
+s.ios.deployment_target = '9.0'
+s.name              = 'AnimatedField'
+s.summary           = 'Animated UITextField with check & filter with regular expressions for default types (email, url, password, price, date...) for iOS'
+s.description       = 'AnimatedField create a view with a UITextField and title. It make animations with the placeholder, also check & filter with regular expressions for default types (email, url, password, price, date...)'
+s.version           = '1.0.1'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+# ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.homepage         = 'https://github.com/alberdev/AnimatedField'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'alberdev' => 'albertokr@gmail.com' }
-  s.source           = { :git => 'https://github.com/alberdev/AnimatedField.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+s.license           = { :type => 'MIT', :file => 'LICENSE' }
 
-  s.ios.deployment_target = '8.0'
+# ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = 'AnimatedField/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'AnimatedField' => ['AnimatedField/Assets/*.png']
-  # }
+s.author            = { 'Alberto Aznar' => 'info@alberdev.com' }
+s.homepage          = 'https://github.com/alberdev/AnimatedField'
+s.social_media_url  = 'https://twitter.com/alberdev'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+# ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.source            = { :git => 'https://github.com/alberdev/AnimatedField.git', :tag => s.version.to_s }
+
+# ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.framework         = 'UIKit'
+
+# ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.source_files      = 'AnimatedField/**/*'
+
+# ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.resources         = 'AnimatedField/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}'
+
+# ――― Swift Version ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.swift_version     = '4.2'
+    
 end

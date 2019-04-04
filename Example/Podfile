@@ -2,10 +2,4 @@ use_frameworks!
 
 target 'AnimatedField_Example' do
   pod 'AnimatedField', :path => '../'
-
-  target 'AnimatedField_Tests' do
-    inherit! :search_paths
-
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-  end
 end
