@@ -1,34 +1,33 @@
 //
-//  AnimatedField+Delegate.swift
-//  FashTime
+//  AnimatedField+TextViewDelegate.swift
+//  AnimatedField
 //
-//  Created by Alberto Aznar de los Ríos on 03/04/2019.
-//  Copyright © 2019 FashTime Ltd. All rights reserved.
+//  Created by Alberto Aznar de los Ríos on 05/04/2019.
 //
 
 import Foundation
 
-extension AnimatedField: UITextFieldDelegate {
+extension AnimatedField: UITextViewDelegate {
     
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
         // Priorize datasource returns
-        if let shouldChange = dataSource?.animatedField(self, shouldChangeCharactersIn: range, replacementString: string) {
+        if let shouldChange = dataSource?.animatedField(self, shouldChangeCharactersIn: range, replacementString: text) {
             return shouldChange
         }
         
         // Copy new character
-        var newInput = string
+        var newInput = text
         
         // Replace special characters in newInput
         newInput = newInput.replacingOccurrences(of: "`", with: "")
         newInput = newInput.replacingOccurrences(of: "^", with: "")
         newInput = newInput.replacingOccurrences(of: "¨", with: "")
         
-        // Replace special characters in textField
-        textField.text = textField.text?.replacingOccurrences(of: "`", with: "")
-        textField.text = textField.text?.replacingOccurrences(of: "^", with: "")
-        textField.text = textField.text?.replacingOccurrences(of: "¨", with: "")
+        // Replace special characters in textView
+        textView.text = textView.text?.replacingOccurrences(of: "`", with: "")
+        textView.text = textView.text?.replacingOccurrences(of: "^", with: "")
+        textView.text = textView.text?.replacingOccurrences(of: "¨", with: "")
         
         // Apply uppercased & lowercased if available
         if uppercased { newInput = newInput.uppercased() }
@@ -43,16 +42,16 @@ extension AnimatedField: UITextFieldDelegate {
         if !newInput.isValidWithRegEx(regex) && newInput != "" { return false }
         
         // Change textfield in manual mode in case of changing newInput. Check limits also
-        if newInput != string {
-            textField.text = textField.text?.count ?? 0 + newInput.count <= limit ? "\(textField.text ?? "")\(newInput)" : textField.text
+        if newInput != text {
+            textView.text = textView.text?.count ?? 0 + newInput.count <= limit ? "\(textView.text ?? "")\(newInput)" : textView.text
             return false
         }
         
         // Check price (if case)
         if let type = type, newInput != "", case let AnimatedFieldType.price(maxPrice, maxDecimals) = type {
             
-            let newText = "\(textField.text ?? "")\(newInput)"
-        
+            let newText = "\(textView.text ?? "")\(newInput)"
+            
             if let price = formatter.number(from: newText) {
                 let components = newText.components(separatedBy: Locale.current.decimalSeparator ?? ".")
                 if components.count > 1 {
@@ -67,39 +66,32 @@ extension AnimatedField: UITextFieldDelegate {
         }
         
         // Check limits
-        return textField.text?.count ?? 0 + newInput.count <= limit
+        return textView.text?.count ?? 0 + newInput.count <= limit
     }
     
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return dataSource?.animatedFieldShouldReturn(self) ?? true
+    public func textViewDidChange(_ textView: UITextView) {
+        resizeTextViewHeight()
+        updateCounterLabel()
     }
     
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        beginTextViewPlaceholder()
         animateIn()
         showNormal()
         highlightField(true)
         delegate?.animatedFieldDidBeginEditing(self)
     }
     
-    public func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textViewDidEndEditing(_ textView: UITextView) {
+        endTextViewPlaceholder()
         animateOut()
         highlightField(false)
         delegate?.animatedFieldDidEndEditing(self)
         
         let validationExpression = type?.validationExpression ?? ".*"
         let regex = dataSource?.animatedFieldValidationMatches(self) ?? validationExpression
-        if let text = textField.text, text != "", !text.isValidWithRegEx(regex) {
+        if let text = textView.text, text != "", !text.isValidWithRegEx(regex) {
             showAlert(dataSource?.animatedFieldValidationError(self) ?? type?.validationError)
-        }
-        
-        if
-            let type = type,
-            case let AnimatedFieldType.price(maxPrice, _) = type,
-            let text = textField.text,
-            text != "",
-            let price = formatter.number(from: text),
-            price.doubleValue > maxPrice {
-            showAlert(dataSource?.animatedFieldPriceExceededError(self) ?? type.priceExceededError)
         }
     }
 }

@@ -16,6 +16,9 @@ public struct AnimatedFieldFormat {
     /// Font for text field
     public var textFont = UIFont.systemFont(ofSize: 16, weight: .regular)
     
+    /// Font for counter
+    public var counterFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+    
     /// Line color
     public var lineColor = UIColor.lightGray
     
@@ -24,6 +27,9 @@ public struct AnimatedFieldFormat {
     
     /// TextField text color
     public var textColor = UIColor.darkGray
+    
+    /// Counter text color
+    public var counterColor = UIColor.darkGray
     
     /// Alert status color
     public var alertColor = UIColor.red
@@ -42,6 +48,15 @@ public struct AnimatedFieldFormat {
     
     /// Secure icon image (Off status)
     public var visibleOffImage = IconsLibrary.imageOfEyeoff(color: .red)
+    
+    /// Enable counter label
+    public var counterEnabled = false
+    
+    /// Set count down if counter is enabled
+    public var countDown = false
+    
+    /// Highlight color when becomes active
+    public var highlightColor: UIColor? = UIColor(displayP3Red: 0, green: 139/255, blue: 96/255, alpha: 1.0)
     
     public init() {}
 }

@@ -16,6 +16,7 @@ public enum AnimatedFieldType {
     case price(Double, Int) // max price, max decimals
     case url
     case date(Date?, Date?, Date?, String?, String?) // default date, min date, max date, choose text, date format
+    case multiline
     
     var decimal: String {
         var separator = Locale.current.decimalSeparator ?? "\\."

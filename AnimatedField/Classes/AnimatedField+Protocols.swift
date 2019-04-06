@@ -37,7 +37,7 @@ public protocol AnimatedFieldDataSource: class {
      - parameter animatedField: current animatedField
      - returns: maximum of characters you want for this field
      */
-    func animatedFieldLimit(_ animatedField: AnimatedField) -> Int
+    func animatedFieldLimit(_ animatedField: AnimatedField) -> Int?
     
     /**
      ------------------------------------------------------------------------------------------
@@ -88,7 +88,7 @@ public extension AnimatedFieldDataSource {
         return true
     }
     
-    func animatedFieldLimit(_ animatedField: AnimatedField) -> Int {
+    func animatedFieldLimit(_ animatedField: AnimatedField) -> Int? {
         // Optional
         return Int.max
     }
@@ -131,6 +131,15 @@ public protocol AnimatedFieldDelegate: class {
      - parameter animatedField: current animatedField
      */
     func animatedFieldDidEndEditing(_ animatedField: AnimatedField)
+    
+    /**
+     ------------------------------------------------------------------------------------------
+     Is called when field (multiline) is resized
+     ------------------------------------------------------------------------------------------
+     - parameter animatedField: current animatedField
+     - parameter height: current height
+     */
+    func animatedField(_ animatedField: AnimatedField, didResizeHeight height: CGFloat)
     
 }
 

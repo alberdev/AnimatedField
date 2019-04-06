@@ -13,10 +13,16 @@ open class AnimatedField: UIView {
     @IBOutlet weak private var textField: UITextField!
     @IBOutlet weak private var textFieldRightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var titleLabelBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak private var alertLabel: UILabel!
+    @IBOutlet weak private var counterLabel: UILabel!
     @IBOutlet weak private var eyeButton: UIButton!
     @IBOutlet weak private var lineView: UIView!
+    @IBOutlet weak private var textView: UITextView!
+    @IBOutlet weak private var textViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleLabelTextFieldConstraint: NSLayoutConstraint?
+    @IBOutlet weak var titleLabelTextViewConstraint: NSLayoutConstraint?
+    @IBOutlet weak var counterLabelTextFieldConstraint: NSLayoutConstraint?
+    @IBOutlet weak var counterLabelTextViewConstraint: NSLayoutConstraint?
     
     /// Date picker values
     private var datePicker: UIDatePicker?
@@ -48,12 +54,25 @@ open class AnimatedField: UIView {
             if case AnimatedFieldType.url = type {
                 keyboardType = .URL
             }
+            if case AnimatedFieldType.multiline = type {
+                textField.isHidden = true
+                textView.isHidden = false
+                setupTextViewConstraints()
+            } else {
+                textField.isHidden = false
+                textView.isHidden = true
+                setupTextFieldConstraints()
+            }
         }
     }
     
     /// Placeholder
     public var placeholder = "" {
-        didSet { setupTextField() }
+        didSet {
+            setupTextField()
+            setupTextView()
+            setupTitle()
+        }
     }
     
     /// Uppercased field format
@@ -109,8 +128,13 @@ open class AnimatedField: UIView {
             titleLabel.textColor = format.titleColor
             textField.font = format.textFont
             textField.textColor = format.textColor
+            textView.font = format.textFont
+            textView.textColor = format.textColor
             lineView.backgroundColor = format.lineColor
             eyeButton.tintColor = format.textColor
+            counterLabel.isHidden = !format.counterEnabled
+            counterLabel.font = format.counterFont
+            counterLabel.textColor = format.counterColor
         }
     }
     
@@ -127,6 +151,8 @@ open class AnimatedField: UIView {
     private func commonInit() {
         _ = fromNib()
         setupTextField()
+        setupTextView()
+        setupTitle()
         setupLine()
         setupEyeButton()
         setupAlertTitle()
@@ -137,9 +163,21 @@ open class AnimatedField: UIView {
         textField.placeholder = placeholder
         textField.textColor = format.textColor
         textField.tag = tag
+    }
+    
+    private func setupTitle() {
         titleLabel.alpha = 0.0
         titleLabel.text = placeholder
-        titleLabelBottomConstraint.constant = -20
+    }
+    
+    private func setupTextView() {
+        textView.delegate = self
+        textView.textColor = format.textColor
+        textView.tag = tag
+        textView.textContainerInset = .zero
+        textView.contentInset = UIEdgeInsets(top: 13, left: -5, bottom: 6, right: 0)
+        textViewDidChange(textView)
+        endTextViewPlaceholder()
     }
     
     private func setupLine() {
@@ -153,6 +191,22 @@ open class AnimatedField: UIView {
     
     private func setupAlertTitle() {
         alertLabel.alpha = 0.0
+    }
+    
+    private func setupTextFieldConstraints() {
+        titleLabelTextFieldConstraint?.isActive = true
+        counterLabelTextFieldConstraint?.isActive = true
+        titleLabelTextViewConstraint?.isActive = false
+        counterLabelTextViewConstraint?.isActive = false
+        layoutIfNeeded()
+    }
+    
+    private func setupTextViewConstraints() {
+        titleLabelTextFieldConstraint?.isActive = false
+        counterLabelTextFieldConstraint?.isActive = false
+        titleLabelTextViewConstraint?.isActive = true
+        counterLabelTextViewConstraint?.isActive = true
+        layoutIfNeeded()
     }
     
     private func setupDatePicker(minDate: Date?, maxDate: Date?, chooseText: String?) {
@@ -188,6 +242,10 @@ open class AnimatedField: UIView {
         secureField(!textField.isSecureTextEntry)
     }
     
+    @IBAction func didChangeTextField(_ sender: UITextField) {
+        updateCounterLabel()
+    }
+    
     @objc func didChooseDatePicker() {
         let date = datePicker?.date ?? initialDate
         textField.text = date?.format(dateFormat: dateFormat ?? "dd / MM / yyyy")
@@ -201,7 +259,8 @@ extension AnimatedField {
     
     func animateIn() {
         textField.placeholder = ""
-        titleLabelBottomConstraint.constant = 1
+        titleLabelTextViewConstraint?.constant = 1
+        titleLabelTextFieldConstraint?.constant = 1
         UIView.animate(withDuration: 0.3) { [weak self] in
             self?.titleLabel.alpha = 1.0
             self?.layoutIfNeeded()
@@ -210,7 +269,8 @@ extension AnimatedField {
     
     func animateOut() {
         textField.placeholder = placeholder
-        titleLabelBottomConstraint.constant = -20
+        titleLabelTextViewConstraint?.constant = -20
+        titleLabelTextFieldConstraint?.constant = -20
         UIView.animate(withDuration: 0.3) { [weak self] in
             self?.titleLabel.alpha = 0.0
             self?.layoutIfNeeded()
@@ -233,6 +293,44 @@ extension AnimatedField {
         UIView.animate(withDuration: 0.3) { [weak self] in
             self?.alertLabel.alpha = 0.0
         }
+    }
+    
+    func updateCounterLabel() {
+        let value = (dataSource?.animatedFieldLimit(self) ?? 0) - textView.text.count
+        counterLabel.text = format.countDown ? "\(value)" : "\((textField.text?.count ?? 0) + 1)/\(dataSource?.animatedFieldLimit(self) ?? 0)"
+        counterLabel.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.counterLabel.transform = .identity
+        }
+    }
+    
+    func resizeTextViewHeight() {
+        let size = textView.sizeThatFits(CGSize(width: textView.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
+        textViewHeightConstraint.constant = 10 + size.height
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.layoutIfNeeded()
+        }
+        delegate?.animatedField(self, didResizeHeight: size.height + 10 + titleLabel.frame.size.height)
+    }
+    
+    func endTextViewPlaceholder() {
+        if textView.text == "" {
+            textView.text = placeholder
+            textView.textColor = UIColor.lightGray.withAlphaComponent(0.8)
+        }
+    }
+    
+    func beginTextViewPlaceholder() {
+        if textView.text == placeholder {
+            textView.text = ""
+            textView.textColor = format.textColor
+        }
+    }
+    
+    func highlightField(_ highlight: Bool) {
+        guard let color = format.highlightColor else { return }
+        titleLabel.textColor = highlight ? color : format.textColor
+        lineView.backgroundColor = highlight ? color : format.lineColor
     }
 }
 

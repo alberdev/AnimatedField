@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.platform = :ios
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '10.0'
 s.name              = 'AnimatedField'
 s.summary           = 'Animated UITextField with check & filter with regular expressions for default types (email, url, password, price, date...) for iOS'
 s.description       = 'AnimatedField create a view with a UITextField and title. It make animations with the placeholder, also check & filter with regular expressions for default types (email, url, password, price, date...)'
@@ -41,7 +41,7 @@ s.source_files      = 'AnimatedField/**/*'
 
 # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-s.resources         = 'AnimatedField/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}'
+s.resources         = 'AnimatedField/Resources/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}'
 
 # ――― Swift Version ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 

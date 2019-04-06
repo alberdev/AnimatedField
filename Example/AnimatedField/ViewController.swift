@@ -19,9 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var password2AnimatedField: AnimatedField!
     @IBOutlet weak var priceAnimatedField: AnimatedField!
     @IBOutlet weak var urlAnimatedField: AnimatedField!
-    
-    private var initialOriginY: CGFloat = 0
-    private var keyboardHeight: CGFloat = 0
+    @IBOutlet weak var multilineAnimatedField: AnimatedField!
+    @IBOutlet weak var multilineHeightConstraint: NSLayoutConstraint!
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -88,6 +87,15 @@ class ViewController: UIViewController {
         urlAnimatedField.dataSource = self
         urlAnimatedField.delegate = self
         urlAnimatedField.type = .url
+        
+        multilineAnimatedField.format = format
+        multilineAnimatedField.format.counterEnabled = true
+        multilineAnimatedField.format.countDown = true
+        multilineAnimatedField.placeholder = "This is multiline"
+        multilineAnimatedField.dataSource = self
+        multilineAnimatedField.delegate = self
+        multilineAnimatedField.type = .multiline
+        multilineAnimatedField.tag = 1
     }
 }
 
@@ -95,17 +103,34 @@ class ViewController: UIViewController {
 extension ViewController: AnimatedFieldDelegate {
     
     func animatedFieldDidBeginEditing(_ animatedField: AnimatedField) {
-        let offset = animatedField.frame.origin.y - view.frame.height + 400
+        let offset = animatedField.frame.origin.y + animatedField.frame.size.height - (view.frame.height - 350)
         scrollView.setContentOffset(CGPoint(x: 0, y: offset < 0 ? 0 : offset), animated: true)
     }
     
     func animatedFieldDidEndEditing(_ animatedField: AnimatedField) {
-        scrollView.setContentOffset(CGPoint.zero, animated: true)
+        var offset: CGFloat = 0
+        if animatedField.frame.origin.y + animatedField.frame.size.height > scrollView.frame.height {
+            offset = animatedField.frame.origin.y + animatedField.frame.size.height - scrollView.frame.height + 10
+        }
+        scrollView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
+    }
+    
+    func animatedField(_ animatedField: AnimatedField, didResizeHeight height: CGFloat) {
+        multilineHeightConstraint.constant = height
+        view.layoutIfNeeded()
+        
+        let offset = animatedField.frame.origin.y + height - (view.frame.height - 350)
+        scrollView.setContentOffset(CGPoint(x: 0, y: offset < 0 ? 0 : offset), animated: false)
     }
 }
 
 extension ViewController: AnimatedFieldDataSource {
     
-    
+    func animatedFieldLimit(_ animatedField: AnimatedField) -> Int? {
+        switch animatedField.tag {
+        case 1: return 300
+        default: return nil
+        }
+    }
 }
 
