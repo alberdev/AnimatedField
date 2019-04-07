@@ -42,7 +42,7 @@
 		04C0FE15D7531C97AB8B9642A0E307E0 /* Pods-AnimatedField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimatedField_Example-dummy.m"; sourceTree = "<group>"; };
 		0F413D074E0B6B7798410A1CFF6C787F /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		0F9EE5CAF224D928BADDC7EC9B0C7190 /* Pods-AnimatedField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnimatedField_Example-umbrella.h"; sourceTree = "<group>"; };
-		13EC85449CF2EEDA5810DA2EA680E8AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		13EC85449CF2EEDA5810DA2EA680E8AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1556FD7270C5DDD890C9E958E6241472 /* AnimatedField+Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+Protocols.swift"; path = "AnimatedField/Classes/AnimatedField+Protocols.swift"; sourceTree = "<group>"; };
 		19ACBD7651F267AC9E710D3560B22268 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F72BA8D2CB6A80ABB335D24425728B1 /* AnimatedField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-prefix.pch"; sourceTree = "<group>"; };
@@ -52,20 +52,20 @@
 		3AE5B23F1B76E049616737217BAB8CEC /* AnimatedFieldFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldFormat.swift; path = AnimatedField/Classes/AnimatedFieldFormat.swift; sourceTree = "<group>"; };
 		3E9778A34DDA99965720CEB6F211AAA7 /* Pods-AnimatedField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AnimatedField_Example.modulemap"; sourceTree = "<group>"; };
 		5CADE07BE25B06C98CA95BA4D9AE7038 /* AnimatedField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedField.xcconfig; sourceTree = "<group>"; };
-		5DE6BDE4A97D9817A147D0B7D5ED8C08 /* AnimatedField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AnimatedField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5DE6BDE4A97D9817A147D0B7D5ED8C08 /* AnimatedField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AnimatedField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		639466633464279429D28072DD34C410 /* Pods-AnimatedField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimatedField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6BF2727F7B0661B46363F85E80B85EB5 /* AnimatedField+TextFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextFieldDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextFieldDelegate.swift"; sourceTree = "<group>"; };
-		6D8A3C1244DC321B0FAAF7810C5D7279 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6D8A3C1244DC321B0FAAF7810C5D7279 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		714D5C9E0DA00B2834021E86CF183C20 /* Pods-AnimatedField_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimatedField_Example-resources.sh"; sourceTree = "<group>"; };
-		8BB9AB222F1B4EB9FA7CE6A1D9AFD21E /* AnimatedField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AnimatedField.framework; path = AnimatedField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB9AB222F1B4EB9FA7CE6A1D9AFD21E /* AnimatedField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C26E90BB7536613E13A85CE84F58EB8 /* AnimatedField.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AnimatedField.xib; path = AnimatedField/Classes/AnimatedField.xib; sourceTree = "<group>"; };
 		8E0A9D5C5338AB39A0FE14AEBDFFE1B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		960D1B69E2AD870AF22660BF1805871A /* AnimatedField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedField.swift; path = AnimatedField/Classes/AnimatedField.swift; sourceTree = "<group>"; };
 		99C0701ADB4CCBB71928680F0C523741 /* Pods-AnimatedField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9B344E895033B014EBE96B891DB743B8 /* Pods-AnimatedField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimatedField_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A179F8A965857EBDAA4501FC99AC01D6 /* Pods_AnimatedField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AnimatedField_Example.framework; path = "Pods-AnimatedField_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A179F8A965857EBDAA4501FC99AC01D6 /* Pods_AnimatedField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68A98F02EA9B735DA4D50493FBC127 /* UIView+Shake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		B5CAA0CCA1B17F49F3CFF4054ABC3F04 /* AnimatedField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedField.modulemap; sourceTree = "<group>"; };
 		BB92C26CB2A9ACA43625CE25163C5FD2 /* AnimatedFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldType.swift; path = AnimatedField/Classes/AnimatedFieldType.swift; sourceTree = "<group>"; };
@@ -146,7 +146,6 @@
 		2A91BCBDA88C8F1B474194802D99F9F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CFA5A65514BC76FA4ED3197A0465DB3F /* IconsLibrary.swift */,
 			);
 			name = Resources;
 			path = AnimatedField/Classes/Resources;
@@ -217,6 +216,7 @@
 				3AE5B23F1B76E049616737217BAB8CEC /* AnimatedFieldFormat.swift */,
 				BB92C26CB2A9ACA43625CE25163C5FD2 /* AnimatedFieldType.swift */,
 				4077F22928AF464CCC975A81D02CA90F /* Extensions */,
+				E3828A812259FBA800E444B2 /* Utils */,
 				2177B70C431CAD8848615A8301F9D35D /* Pod */,
 				2A91BCBDA88C8F1B474194802D99F9F3 /* Resources */,
 				2CF8FC811F23033952C24F03DFF0B5B5 /* Support Files */,
@@ -231,6 +231,14 @@
 				2001F3E468C1C68462EFA30BF2ADAF14 /* Pods-AnimatedField_Example */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E3828A812259FBA800E444B2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CFA5A65514BC76FA4ED3197A0465DB3F /* IconsLibrary.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,8 +410,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -476,8 +483,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
