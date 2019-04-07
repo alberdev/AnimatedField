@@ -15,7 +15,7 @@ s.ios.deployment_target = '10.0'
 s.name              = 'AnimatedField'
 s.summary           = 'Animated UITextField with check & filter with regular expressions for default types (email, url, password, price, date...) for iOS'
 s.description       = 'AnimatedField create a view with a UITextField and title. It make animations with the placeholder, also check & filter with regular expressions for default types (email, url, password, price, date...)'
-s.version           = '1.0.1'
+s.version           = '1.0.2'
 
 # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
