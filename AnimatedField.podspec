@@ -41,7 +41,7 @@ s.source_files      = 'AnimatedField/**/*'
 
 # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-s.resources         = 'AnimatedField/Resources/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}'
+# s.resources         = 'AnimatedField/Resources/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}'
 
 # ――― Swift Version ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
