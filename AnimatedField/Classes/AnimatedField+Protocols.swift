@@ -141,6 +141,15 @@ public protocol AnimatedFieldDelegate: class {
      */
     func animatedField(_ animatedField: AnimatedField, didResizeHeight height: CGFloat)
     
+    /**
+     ------------------------------------------------------------------------------------------
+     Is called when secure button is pressed
+     ------------------------------------------------------------------------------------------
+     - parameter animatedField: current animatedField
+     - parameter secure: secured text
+     */
+    func animatedField(_ animatedField: AnimatedField, didSecureText secure: Bool)
+    
 }
 
 public extension AnimatedFieldDelegate {
@@ -150,6 +159,14 @@ public extension AnimatedFieldDelegate {
     }
     
     func animatedFieldDidEndEditing(_ animatedField: AnimatedField) {
+        // Optional
+    }
+    
+    func animatedField(_ animatedField: AnimatedField, didResizeHeight height: CGFloat) {
+        // Optional
+    }
+    
+    func animatedField(_ animatedField: AnimatedField, didSecureText secure: Bool) {
         // Optional
     }
 }

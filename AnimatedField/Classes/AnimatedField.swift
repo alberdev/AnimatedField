@@ -369,5 +369,6 @@ extension AnimatedField: AnimatedFieldInterface {
     open func secureField(_ secure: Bool) {
         isSecure = secure
         eyeButton.setImage(secure ? format.visibleOnImage : format.visibleOffImage, for: .normal)
+        delegate?.animatedField(self, didSecureText: secure)
     }
 }
