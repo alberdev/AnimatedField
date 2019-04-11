@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0204713A9F9A8FE1F0BF1D27 /* Pods_AnimatedField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22DD150B4DC06405BE1298CE /* AnimatedField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AnimatedField.podspec; path = ../AnimatedField.podspec; sourceTree = "<group>"; };
+		22DD150B4DC06405BE1298CE /* AnimatedField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AnimatedField.podspec; path = ../AnimatedField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		43E785F93E88489F00D11212 /* Pods-AnimatedField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimatedField_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AnimatedField_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedField_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,21 +220,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AnimatedField/AnimatedField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnimatedField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

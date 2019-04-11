@@ -7,270 +7,278 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0545415BC3E2866D789313B18C890B5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		0DB468ED9A3F1854ADA2140637075DE2 /* AnimatedField.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8C26E90BB7536613E13A85CE84F58EB8 /* AnimatedField.xib */; };
-		171EC9FFFBDA99B1C9F68D13825D1E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
-		1FCDCD57D5E0DD667CC58C20A8F83001 /* AnimatedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D1B69E2AD870AF22660BF1805871A /* AnimatedField.swift */; };
-		2BA4A1DE9E0D1D240ADA042BB7D37645 /* Pods-AnimatedField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F9EE5CAF224D928BADDC7EC9B0C7190 /* Pods-AnimatedField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33C34092EE4EF7B12BC51DC1B8808680 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37276E085873C3588D6676F922E00FB2 /* Date+Format.swift */; };
-		489BBD379C566117FD79134081E17A5E /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F413D074E0B6B7798410A1CFF6C787F /* UIView+Nib.swift */; };
-		648A2DC444604A21CF4D1DDA1D940FDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		73DC54ECC94103EEF393883AAFB3CE3D /* AnimatedField+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54AE5BE9C70DB8C96FD277F706E8B11 /* AnimatedField+TextViewDelegate.swift */; };
-		75E3F73C8DA2E33C26433B6728790696 /* IconsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA5A65514BC76FA4ED3197A0465DB3F /* IconsLibrary.swift */; };
-		8625A6D9039AE0EAFB7FA429CF92CD25 /* AnimatedField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 340ABEDCFD678DE36C9F526C86C4867D /* AnimatedField-dummy.m */; };
-		903E31F7DD4C36DA40708EF2E49CDD9F /* AnimatedFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB92C26CB2A9ACA43625CE25163C5FD2 /* AnimatedFieldType.swift */; };
-		963A5C3D2AB45FC5049E9E1050D49981 /* AnimatedField+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556FD7270C5DDD890C9E958E6241472 /* AnimatedField+Protocols.swift */; };
-		B0E8166624D922B1AB88ECBF45110F0D /* AnimatedField+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF2727F7B0661B46363F85E80B85EB5 /* AnimatedField+TextFieldDelegate.swift */; };
-		EDF5C0CD9C0DAE9BA0E4A8F89196E830 /* AnimatedField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A25AA593EC17AC12CE6D782AE9852E0 /* AnimatedField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF6D5D25B31A4B1AEDC77CDFE87991EC /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A98F02EA9B735DA4D50493FBC127 /* UIView+Shake.swift */; };
-		F143FC884E2E1C4C80A7D3CA1875FC30 /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDC240827C9AC56BA6CC904A1F93A6 /* String+RegEx.swift */; };
-		F3462A5A9C46A0FA748F75925E7A9F45 /* Pods-AnimatedField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0FE15D7531C97AB8B9642A0E307E0 /* Pods-AnimatedField_Example-dummy.m */; };
-		FABC9680DFD9BFF4F621FEEE25898F51 /* AnimatedFieldFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5B23F1B76E049616737217BAB8CEC /* AnimatedFieldFormat.swift */; };
+		0AEE01A7DD88AE6D6DF462941972EC22 /* Pods-AnimatedField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64124AF0EA52750C653C3FD75541DD3B /* Pods-AnimatedField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10D6ED83A21069A00EB60899343E9BD7 /* AnimatedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901A0D4E581DA21FB34E981FB22D547 /* AnimatedField.swift */; };
+		2DF8F55E3ADAFE51C6F63C1FC46109B2 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4BD3D7976688FBE282D718B2EC4D5B /* Date+Format.swift */; };
+		2FDECA9C5285CE846495C136989A73CA /* AnimatedField.xib in Sources */ = {isa = PBXBuildFile; fileRef = 7785090E6BF29533702386B8F2FF382D /* AnimatedField.xib */; };
+		32CF29A7CAB184CBC8AA09FA8652C2EA /* AnimatedField+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A9ED887AFF4554C2A80E9AF906F26E /* AnimatedField+TextFieldDelegate.swift */; };
+		36AC7A7BCF6F842FCCA6D3BD3814927B /* AnimatedFieldFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37500CE752F6F3E8D2DE66C3FFF289 /* AnimatedFieldFormat.swift */; };
+		4EA5CCB60E2F0B342FA85FC91874293D /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666F2FA7C907E250F26C1312F47FA760 /* String+RegEx.swift */; };
+		65203EF32E0FB9ABFEFE3A27D0F866A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		763376EC74F8E452B2C11A90C2FFDC52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
+		936ADEB8063D8F338543CAA22552B30B /* Pods-AnimatedField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A1D19FA550E165F0A4798926725BD3 /* Pods-AnimatedField_Example-dummy.m */; };
+		A5B89A286E0E535BE0E32BF7F9688886 /* AnimatedField+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA4174515DFB123D0FE9A904E98D025 /* AnimatedField+Protocols.swift */; };
+		AAAA404DFA51E0B11C01748C4F7F82AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		CEAE6F6475ED03DD96D65A47A25B48AE /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1364D7057EBEE77F1262FAF02919B /* UIView+Shake.swift */; };
+		D59E5CBCECE02FE0B9E238057681ADFC /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABADD71790722FF20F9319EF2739E8 /* UIView+Nib.swift */; };
+		D816D552CB3346B149D7564D2E1A77FD /* AnimatedField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5E68085075F2A0C70DE679A751C02E /* AnimatedField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3828A87225A083300E444B2 /* IconsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3828A86225A083300E444B2 /* IconsLibrary.swift */; };
+		F06A1B58139D3D225D4F0030ADE3923C /* AnimatedField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C53A3BAD3E675B3BBF6C4ED0047D0D51 /* AnimatedField-dummy.m */; };
+		F75470B9BCD0C21B50C7194FDFA7034C /* AnimatedFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022F238BE45955769375922D0643933 /* AnimatedFieldType.swift */; };
+		FEDB58D25EF23A5F28CBD26ACE336AF9 /* AnimatedField+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858446EC156B52BA19D66E32F208D70C /* AnimatedField+TextViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EC13AFBEA2EE8670F25A970D0D7655B2 /* PBXContainerItemProxy */ = {
+		5E2A840B69A28CDC06751C8657B3FAF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C131FFA419258FB1BB0AA4ED15B7C035;
+			remoteGlobalIDString = 9FA631C269FD035489D932BE6527E56C;
 			remoteInfo = AnimatedField;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04C0FE15D7531C97AB8B9642A0E307E0 /* Pods-AnimatedField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimatedField_Example-dummy.m"; sourceTree = "<group>"; };
-		0F413D074E0B6B7798410A1CFF6C787F /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
-		0F9EE5CAF224D928BADDC7EC9B0C7190 /* Pods-AnimatedField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnimatedField_Example-umbrella.h"; sourceTree = "<group>"; };
-		13EC85449CF2EEDA5810DA2EA680E8AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		1556FD7270C5DDD890C9E958E6241472 /* AnimatedField+Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+Protocols.swift"; path = "AnimatedField/Classes/AnimatedField+Protocols.swift"; sourceTree = "<group>"; };
-		19ACBD7651F267AC9E710D3560B22268 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F72BA8D2CB6A80ABB335D24425728B1 /* AnimatedField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-prefix.pch"; sourceTree = "<group>"; };
-		340ABEDCFD678DE36C9F526C86C4867D /* AnimatedField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedField-dummy.m"; sourceTree = "<group>"; };
-		37276E085873C3588D6676F922E00FB2 /* Date+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
-		3A25AA593EC17AC12CE6D782AE9852E0 /* AnimatedField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-umbrella.h"; sourceTree = "<group>"; };
-		3AE5B23F1B76E049616737217BAB8CEC /* AnimatedFieldFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldFormat.swift; path = AnimatedField/Classes/AnimatedFieldFormat.swift; sourceTree = "<group>"; };
-		3E9778A34DDA99965720CEB6F211AAA7 /* Pods-AnimatedField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AnimatedField_Example.modulemap"; sourceTree = "<group>"; };
-		5CADE07BE25B06C98CA95BA4D9AE7038 /* AnimatedField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedField.xcconfig; sourceTree = "<group>"; };
-		5DE6BDE4A97D9817A147D0B7D5ED8C08 /* AnimatedField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AnimatedField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		639466633464279429D28072DD34C410 /* Pods-AnimatedField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimatedField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6BF2727F7B0661B46363F85E80B85EB5 /* AnimatedField+TextFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextFieldDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextFieldDelegate.swift"; sourceTree = "<group>"; };
-		6D8A3C1244DC321B0FAAF7810C5D7279 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		714D5C9E0DA00B2834021E86CF183C20 /* Pods-AnimatedField_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimatedField_Example-resources.sh"; sourceTree = "<group>"; };
-		8BB9AB222F1B4EB9FA7CE6A1D9AFD21E /* AnimatedField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C26E90BB7536613E13A85CE84F58EB8 /* AnimatedField.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AnimatedField.xib; path = AnimatedField/Classes/AnimatedField.xib; sourceTree = "<group>"; };
-		8E0A9D5C5338AB39A0FE14AEBDFFE1B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		960D1B69E2AD870AF22660BF1805871A /* AnimatedField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedField.swift; path = AnimatedField/Classes/AnimatedField.swift; sourceTree = "<group>"; };
-		99C0701ADB4CCBB71928680F0C523741 /* Pods-AnimatedField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedField_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9B344E895033B014EBE96B891DB743B8 /* Pods-AnimatedField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimatedField_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A179F8A965857EBDAA4501FC99AC01D6 /* Pods_AnimatedField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE68A98F02EA9B735DA4D50493FBC127 /* UIView+Shake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
-		B5CAA0CCA1B17F49F3CFF4054ABC3F04 /* AnimatedField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedField.modulemap; sourceTree = "<group>"; };
-		BB92C26CB2A9ACA43625CE25163C5FD2 /* AnimatedFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldType.swift; path = AnimatedField/Classes/AnimatedFieldType.swift; sourceTree = "<group>"; };
-		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C2FDC240827C9AC56BA6CC904A1F93A6 /* String+RegEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
-		CFA5A65514BC76FA4ED3197A0465DB3F /* IconsLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IconsLibrary.swift; sourceTree = "<group>"; };
-		D8BC817F814D9106AE39E90E77F46E42 /* Pods-AnimatedField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedField_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D9A2B3A3EAFB694EE859481476481DCA /* Pods-AnimatedField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F54AE5BE9C70DB8C96FD277F706E8B11 /* AnimatedField+TextViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextViewDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextViewDelegate.swift"; sourceTree = "<group>"; };
+		01C0DB54ABAD84395B7E1ED30D6C60A1 /* Pods-AnimatedField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedField_Example.release.xcconfig"; sourceTree = "<group>"; };
+		17A9ED887AFF4554C2A80E9AF906F26E /* AnimatedField+TextFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextFieldDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		1B3740F0F2A5ED4B4BE8183F6743C086 /* Pods_AnimatedField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B37500CE752F6F3E8D2DE66C3FFF289 /* AnimatedFieldFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldFormat.swift; path = AnimatedField/Classes/AnimatedFieldFormat.swift; sourceTree = "<group>"; };
+		1DABADD71790722FF20F9319EF2739E8 /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		27E7E4979FCD619A4789BA39625A3503 /* Pods-AnimatedField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimatedField_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3C5E68085075F2A0C70DE679A751C02E /* AnimatedField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-umbrella.h"; sourceTree = "<group>"; };
+		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		64124AF0EA52750C653C3FD75541DD3B /* Pods-AnimatedField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnimatedField_Example-umbrella.h"; sourceTree = "<group>"; };
+		666F2FA7C907E250F26C1312F47FA760 /* String+RegEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
+		66CE728E24F8DB2CF758E43FA4848D9D /* Pods-AnimatedField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AnimatedField_Example.modulemap"; sourceTree = "<group>"; };
+		6E4BD3D7976688FBE282D718B2EC4D5B /* Date+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		718A2F28F38A3A8E4F4ED6FC9E65425A /* AnimatedField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AnimatedField.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		76D1364D7057EBEE77F1262FAF02919B /* UIView+Shake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		7785090E6BF29533702386B8F2FF382D /* AnimatedField.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AnimatedField.xib; path = AnimatedField/Classes/AnimatedField.xib; sourceTree = "<group>"; };
+		7D3251CD3F543A2BA8B64D44D32A70DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		858446EC156B52BA19D66E32F208D70C /* AnimatedField+TextViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextViewDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextViewDelegate.swift"; sourceTree = "<group>"; };
+		9C39A9C6A219CFCBF479990D73276B23 /* AnimatedField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1A1D19FA550E165F0A4798926725BD3 /* Pods-AnimatedField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimatedField_Example-dummy.m"; sourceTree = "<group>"; };
+		A471BFB9710D77F14B629EEB9C86DD22 /* Pods-AnimatedField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedField_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A901A0D4E581DA21FB34E981FB22D547 /* AnimatedField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedField.swift; path = AnimatedField/Classes/AnimatedField.swift; sourceTree = "<group>"; };
+		BE9302E98C4740D8661B3CB4B63DA8AC /* Pods-AnimatedField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimatedField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BF5E1CB515DC01E294B59D6782BFEE8C /* AnimatedField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedField.modulemap; sourceTree = "<group>"; };
+		C1FFE864AECB66ECEC77495575D41DED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C53A3BAD3E675B3BBF6C4ED0047D0D51 /* AnimatedField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedField-dummy.m"; sourceTree = "<group>"; };
+		D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedField.xcconfig; sourceTree = "<group>"; };
+		D50AB8BB7BC46FD823DD79B3D030C56D /* Pods-AnimatedField_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedField_Example-Info.plist"; sourceTree = "<group>"; };
+		D70F0DDDB56E5E9640555807DAE68DB0 /* AnimatedField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-prefix.pch"; sourceTree = "<group>"; };
+		DAA4174515DFB123D0FE9A904E98D025 /* AnimatedField+Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+Protocols.swift"; path = "AnimatedField/Classes/AnimatedField+Protocols.swift"; sourceTree = "<group>"; };
+		E34D15603885E4E171B93CCC2989E97F /* Pods-AnimatedField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E3828A86225A083300E444B2 /* IconsLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsLibrary.swift; sourceTree = "<group>"; };
+		E7CE6C5ED05468A2F18649076CAD1C08 /* AnimatedField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AnimatedField-Info.plist"; sourceTree = "<group>"; };
+		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F022F238BE45955769375922D0643933 /* AnimatedFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldType.swift; path = AnimatedField/Classes/AnimatedFieldType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C8145C7F0E64E0BB02BE166F8BE5D1C /* Frameworks */ = {
+		4C05025298FE286DC559FD575140A32E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				648A2DC444604A21CF4D1DDA1D940FDE /* Foundation.framework in Frameworks */,
+				AAAA404DFA51E0B11C01748C4F7F82AA /* Foundation.framework in Frameworks */,
+				763376EC74F8E452B2C11A90C2FFDC52 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8DF7649985205E015CF021691C4BCD2 /* Frameworks */ = {
+		FEF031262468739770D1B832C569B26B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0545415BC3E2866D789313B18C890B5B /* Foundation.framework in Frameworks */,
-				171EC9FFFBDA99B1C9F68D13825D1E06 /* UIKit.framework in Frameworks */,
+				65203EF32E0FB9ABFEFE3A27D0F866A1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
-				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+				E169A450ED27AC725DF52953F66D11E0 /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		117628988384511F99E0B21008BF6065 /* Development Pods */ = {
+		1BC93BF85C9C610C889AE4D765DC625A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C3908B9A4508731DCDD2AB2DDCFE6A76 /* AnimatedField */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		2001F3E468C1C68462EFA30BF2ADAF14 /* Pods-AnimatedField_Example */ = {
-			isa = PBXGroup;
-			children = (
-				19ACBD7651F267AC9E710D3560B22268 /* Info.plist */,
-				3E9778A34DDA99965720CEB6F211AAA7 /* Pods-AnimatedField_Example.modulemap */,
-				639466633464279429D28072DD34C410 /* Pods-AnimatedField_Example-acknowledgements.markdown */,
-				D9A2B3A3EAFB694EE859481476481DCA /* Pods-AnimatedField_Example-acknowledgements.plist */,
-				04C0FE15D7531C97AB8B9642A0E307E0 /* Pods-AnimatedField_Example-dummy.m */,
-				9B344E895033B014EBE96B891DB743B8 /* Pods-AnimatedField_Example-frameworks.sh */,
-				714D5C9E0DA00B2834021E86CF183C20 /* Pods-AnimatedField_Example-resources.sh */,
-				0F9EE5CAF224D928BADDC7EC9B0C7190 /* Pods-AnimatedField_Example-umbrella.h */,
-				D8BC817F814D9106AE39E90E77F46E42 /* Pods-AnimatedField_Example.debug.xcconfig */,
-				99C0701ADB4CCBB71928680F0C523741 /* Pods-AnimatedField_Example.release.xcconfig */,
-			);
-			name = "Pods-AnimatedField_Example";
-			path = "Target Support Files/Pods-AnimatedField_Example";
-			sourceTree = "<group>";
-		};
-		2177B70C431CAD8848615A8301F9D35D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				5DE6BDE4A97D9817A147D0B7D5ED8C08 /* AnimatedField.podspec */,
-				13EC85449CF2EEDA5810DA2EA680E8AB /* LICENSE */,
-				6D8A3C1244DC321B0FAAF7810C5D7279 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		2A91BCBDA88C8F1B474194802D99F9F3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			path = AnimatedField/Classes/Resources;
-			sourceTree = "<group>";
-		};
-		2CF8FC811F23033952C24F03DFF0B5B5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B5CAA0CCA1B17F49F3CFF4054ABC3F04 /* AnimatedField.modulemap */,
-				5CADE07BE25B06C98CA95BA4D9AE7038 /* AnimatedField.xcconfig */,
-				340ABEDCFD678DE36C9F526C86C4867D /* AnimatedField-dummy.m */,
-				2F72BA8D2CB6A80ABB335D24425728B1 /* AnimatedField-prefix.pch */,
-				3A25AA593EC17AC12CE6D782AE9852E0 /* AnimatedField-umbrella.h */,
-				8E0A9D5C5338AB39A0FE14AEBDFFE1B1 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AnimatedField";
-			sourceTree = "<group>";
-		};
-		4077F22928AF464CCC975A81D02CA90F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				37276E085873C3588D6676F922E00FB2 /* Date+Format.swift */,
-				C2FDC240827C9AC56BA6CC904A1F93A6 /* String+RegEx.swift */,
-				0F413D074E0B6B7798410A1CFF6C787F /* UIView+Nib.swift */,
-				AE68A98F02EA9B735DA4D50493FBC127 /* UIView+Shake.swift */,
+				6E4BD3D7976688FBE282D718B2EC4D5B /* Date+Format.swift */,
+				666F2FA7C907E250F26C1312F47FA760 /* String+RegEx.swift */,
+				1DABADD71790722FF20F9319EF2739E8 /* UIView+Nib.swift */,
+				76D1364D7057EBEE77F1262FAF02919B /* UIView+Shake.swift */,
 			);
 			name = Extensions;
 			path = AnimatedField/Classes/Extensions;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		649F949D748EDF99FECFBFFACAB00A3A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+				718A2F28F38A3A8E4F4ED6FC9E65425A /* AnimatedField.podspec */,
+				7D3251CD3F543A2BA8B64D44D32A70DC /* LICENSE */,
+				C1FFE864AECB66ECEC77495575D41DED /* README.md */,
 			);
-			name = Frameworks;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		6A277CA7EEB34A864AFE9C5CF5292FDB /* Products */ = {
+		8A4ACCB4E086113805E54C85CE85E9AF /* AnimatedField */ = {
 			isa = PBXGroup;
 			children = (
-				8BB9AB222F1B4EB9FA7CE6A1D9AFD21E /* AnimatedField.framework */,
-				A179F8A965857EBDAA4501FC99AC01D6 /* Pods_AnimatedField_Example.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				117628988384511F99E0B21008BF6065 /* Development Pods */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				6A277CA7EEB34A864AFE9C5CF5292FDB /* Products */,
-				C4DAA792F5121CE098155BB64E778CCA /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		C3908B9A4508731DCDD2AB2DDCFE6A76 /* AnimatedField */ = {
-			isa = PBXGroup;
-			children = (
-				960D1B69E2AD870AF22660BF1805871A /* AnimatedField.swift */,
-				8C26E90BB7536613E13A85CE84F58EB8 /* AnimatedField.xib */,
-				1556FD7270C5DDD890C9E958E6241472 /* AnimatedField+Protocols.swift */,
-				6BF2727F7B0661B46363F85E80B85EB5 /* AnimatedField+TextFieldDelegate.swift */,
-				F54AE5BE9C70DB8C96FD277F706E8B11 /* AnimatedField+TextViewDelegate.swift */,
-				3AE5B23F1B76E049616737217BAB8CEC /* AnimatedFieldFormat.swift */,
-				BB92C26CB2A9ACA43625CE25163C5FD2 /* AnimatedFieldType.swift */,
-				4077F22928AF464CCC975A81D02CA90F /* Extensions */,
-				E3828A812259FBA800E444B2 /* Utils */,
-				2177B70C431CAD8848615A8301F9D35D /* Pod */,
-				2A91BCBDA88C8F1B474194802D99F9F3 /* Resources */,
-				2CF8FC811F23033952C24F03DFF0B5B5 /* Support Files */,
+				E3828A85225A083300E444B2 /* Utils */,
+				A901A0D4E581DA21FB34E981FB22D547 /* AnimatedField.swift */,
+				7785090E6BF29533702386B8F2FF382D /* AnimatedField.xib */,
+				DAA4174515DFB123D0FE9A904E98D025 /* AnimatedField+Protocols.swift */,
+				17A9ED887AFF4554C2A80E9AF906F26E /* AnimatedField+TextFieldDelegate.swift */,
+				858446EC156B52BA19D66E32F208D70C /* AnimatedField+TextViewDelegate.swift */,
+				1B37500CE752F6F3E8D2DE66C3FFF289 /* AnimatedFieldFormat.swift */,
+				F022F238BE45955769375922D0643933 /* AnimatedFieldType.swift */,
+				1BC93BF85C9C610C889AE4D765DC625A /* Extensions */,
+				649F949D748EDF99FECFBFFACAB00A3A /* Pod */,
+				CE21756C30C868B9EEAA78FCC0F61B67 /* Support Files */,
 			);
 			name = AnimatedField;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		C4DAA792F5121CE098155BB64E778CCA /* Targets Support Files */ = {
+		8B8AE86644912608185B87FC0D039A25 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2001F3E468C1C68462EFA30BF2ADAF14 /* Pods-AnimatedField_Example */,
+				9E7EE003F907DC6F6A0D3FABFEE3DCB0 /* Pods-AnimatedField_Example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E3828A812259FBA800E444B2 /* Utils */ = {
+		9E7EE003F907DC6F6A0D3FABFEE3DCB0 /* Pods-AnimatedField_Example */ = {
 			isa = PBXGroup;
 			children = (
-				CFA5A65514BC76FA4ED3197A0465DB3F /* IconsLibrary.swift */,
+				66CE728E24F8DB2CF758E43FA4848D9D /* Pods-AnimatedField_Example.modulemap */,
+				BE9302E98C4740D8661B3CB4B63DA8AC /* Pods-AnimatedField_Example-acknowledgements.markdown */,
+				E34D15603885E4E171B93CCC2989E97F /* Pods-AnimatedField_Example-acknowledgements.plist */,
+				A1A1D19FA550E165F0A4798926725BD3 /* Pods-AnimatedField_Example-dummy.m */,
+				27E7E4979FCD619A4789BA39625A3503 /* Pods-AnimatedField_Example-frameworks.sh */,
+				D50AB8BB7BC46FD823DD79B3D030C56D /* Pods-AnimatedField_Example-Info.plist */,
+				64124AF0EA52750C653C3FD75541DD3B /* Pods-AnimatedField_Example-umbrella.h */,
+				A471BFB9710D77F14B629EEB9C86DD22 /* Pods-AnimatedField_Example.debug.xcconfig */,
+				01C0DB54ABAD84395B7E1ED30D6C60A1 /* Pods-AnimatedField_Example.release.xcconfig */,
+			);
+			name = "Pods-AnimatedField_Example";
+			path = "Target Support Files/Pods-AnimatedField_Example";
+			sourceTree = "<group>";
+		};
+		CE21756C30C868B9EEAA78FCC0F61B67 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E1CB515DC01E294B59D6782BFEE8C /* AnimatedField.modulemap */,
+				D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */,
+				C53A3BAD3E675B3BBF6C4ED0047D0D51 /* AnimatedField-dummy.m */,
+				E7CE6C5ED05468A2F18649076CAD1C08 /* AnimatedField-Info.plist */,
+				D70F0DDDB56E5E9640555807DAE68DB0 /* AnimatedField-prefix.pch */,
+				3C5E68085075F2A0C70DE679A751C02E /* AnimatedField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AnimatedField";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D3E8B1ACCBCCB10263E54869D669DAA3 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				EC238D448414BC3A5B5354020D3FD0C9 /* Products */,
+				8B8AE86644912608185B87FC0D039A25 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D3E8B1ACCBCCB10263E54869D669DAA3 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A4ACCB4E086113805E54C85CE85E9AF /* AnimatedField */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */,
+				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E3828A85225A083300E444B2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3828A86225A083300E444B2 /* IconsLibrary.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EC238D448414BC3A5B5354020D3FD0C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C39A9C6A219CFCBF479990D73276B23 /* AnimatedField.framework */,
+				1B3740F0F2A5ED4B4BE8183F6743C086 /* Pods_AnimatedField_Example.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2E6844ABDDABFBDD07692502C264EEE4 /* Headers */ = {
+		742F65BD7E6CA347FC2B8CA3703EA707 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BA4A1DE9E0D1D240ADA042BB7D37645 /* Pods-AnimatedField_Example-umbrella.h in Headers */,
+				0AEE01A7DD88AE6D6DF462941972EC22 /* Pods-AnimatedField_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7EEF5E6893EA40AAB82E54A663A99DC /* Headers */ = {
+		AFBFD3EC8A422EE5E8F1DD16B596F44B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF5C0CD9C0DAE9BA0E4A8F89196E830 /* AnimatedField-umbrella.h in Headers */,
+				D816D552CB3346B149D7564D2E1A77FD /* AnimatedField-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C131FFA419258FB1BB0AA4ED15B7C035 /* AnimatedField */ = {
+		962A8EB3E57032AEE707C77B4EA63480 /* Pods-AnimatedField_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8CE0D02C3BF110D4DD4207E2D69262B /* Build configuration list for PBXNativeTarget "AnimatedField" */;
+			buildConfigurationList = 34313FE0BA54F44F05FF494754E3120D /* Build configuration list for PBXNativeTarget "Pods-AnimatedField_Example" */;
 			buildPhases = (
-				B7EEF5E6893EA40AAB82E54A663A99DC /* Headers */,
-				64CD81DEAFDF80F65880FC593F15A7A1 /* Sources */,
-				D8DF7649985205E015CF021691C4BCD2 /* Frameworks */,
-				0951753A5114126B95C5F92AC535EB95 /* Resources */,
+				742F65BD7E6CA347FC2B8CA3703EA707 /* Headers */,
+				BAE2613AF570A3717F8A7C82BC644BDA /* Sources */,
+				FEF031262468739770D1B832C569B26B /* Frameworks */,
+				9E48451E1651C62849B3C53CDD8AA593 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70187B6E17771E6F45A570313821EB67 /* PBXTargetDependency */,
+			);
+			name = "Pods-AnimatedField_Example";
+			productName = "Pods-AnimatedField_Example";
+			productReference = 1B3740F0F2A5ED4B4BE8183F6743C086 /* Pods_AnimatedField_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9FA631C269FD035489D932BE6527E56C /* AnimatedField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DFE051AE47A059A5B18C53749AA227E /* Build configuration list for PBXNativeTarget "AnimatedField" */;
+			buildPhases = (
+				AFBFD3EC8A422EE5E8F1DD16B596F44B /* Headers */,
+				A32A21250A821ACB108BD215124AFD1F /* Sources */,
+				4C05025298FE286DC559FD575140A32E /* Frameworks */,
+				6B8772720E589766F3DD69854CBB903C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -278,64 +286,45 @@
 			);
 			name = AnimatedField;
 			productName = AnimatedField;
-			productReference = 8BB9AB222F1B4EB9FA7CE6A1D9AFD21E /* AnimatedField.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E524AFE8E500C248D7D014EEE77C2443 /* Pods-AnimatedField_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 661256E50FEF9E3E05A3E04C4874E20B /* Build configuration list for PBXNativeTarget "Pods-AnimatedField_Example" */;
-			buildPhases = (
-				2E6844ABDDABFBDD07692502C264EEE4 /* Headers */,
-				6DF8543FB0F9EEC3B80D27841EF99EC3 /* Sources */,
-				4C8145C7F0E64E0BB02BE166F8BE5D1C /* Frameworks */,
-				0C6326CF2A80EC1E728B53DAC659A589 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F43FC3F1DDB5C021B555EC285F6D5CBE /* PBXTargetDependency */,
-			);
-			name = "Pods-AnimatedField_Example";
-			productName = "Pods-AnimatedField_Example";
-			productReference = A179F8A965857EBDAA4501FC99AC01D6 /* Pods_AnimatedField_Example.framework */;
+			productReference = 9C39A9C6A219CFCBF479990D73276B23 /* AnimatedField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6A277CA7EEB34A864AFE9C5CF5292FDB /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = EC238D448414BC3A5B5354020D3FD0C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C131FFA419258FB1BB0AA4ED15B7C035 /* AnimatedField */,
-				E524AFE8E500C248D7D014EEE77C2443 /* Pods-AnimatedField_Example */,
+				9FA631C269FD035489D932BE6527E56C /* AnimatedField */,
+				962A8EB3E57032AEE707C77B4EA63480 /* Pods-AnimatedField_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0951753A5114126B95C5F92AC535EB95 /* Resources */ = {
+		6B8772720E589766F3DD69854CBB903C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C6326CF2A80EC1E728B53DAC659A589 /* Resources */ = {
+		9E48451E1651C62849B3C53CDD8AA593 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,49 +334,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		64CD81DEAFDF80F65880FC593F15A7A1 /* Sources */ = {
+		A32A21250A821ACB108BD215124AFD1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				963A5C3D2AB45FC5049E9E1050D49981 /* AnimatedField+Protocols.swift in Sources */,
-				B0E8166624D922B1AB88ECBF45110F0D /* AnimatedField+TextFieldDelegate.swift in Sources */,
-				73DC54ECC94103EEF393883AAFB3CE3D /* AnimatedField+TextViewDelegate.swift in Sources */,
-				8625A6D9039AE0EAFB7FA429CF92CD25 /* AnimatedField-dummy.m in Sources */,
-				1FCDCD57D5E0DD667CC58C20A8F83001 /* AnimatedField.swift in Sources */,
-				0DB468ED9A3F1854ADA2140637075DE2 /* AnimatedField.xib in Sources */,
-				FABC9680DFD9BFF4F621FEEE25898F51 /* AnimatedFieldFormat.swift in Sources */,
-				903E31F7DD4C36DA40708EF2E49CDD9F /* AnimatedFieldType.swift in Sources */,
-				33C34092EE4EF7B12BC51DC1B8808680 /* Date+Format.swift in Sources */,
-				75E3F73C8DA2E33C26433B6728790696 /* IconsLibrary.swift in Sources */,
-				F143FC884E2E1C4C80A7D3CA1875FC30 /* String+RegEx.swift in Sources */,
-				489BBD379C566117FD79134081E17A5E /* UIView+Nib.swift in Sources */,
-				EF6D5D25B31A4B1AEDC77CDFE87991EC /* UIView+Shake.swift in Sources */,
+				A5B89A286E0E535BE0E32BF7F9688886 /* AnimatedField+Protocols.swift in Sources */,
+				32CF29A7CAB184CBC8AA09FA8652C2EA /* AnimatedField+TextFieldDelegate.swift in Sources */,
+				FEDB58D25EF23A5F28CBD26ACE336AF9 /* AnimatedField+TextViewDelegate.swift in Sources */,
+				F06A1B58139D3D225D4F0030ADE3923C /* AnimatedField-dummy.m in Sources */,
+				10D6ED83A21069A00EB60899343E9BD7 /* AnimatedField.swift in Sources */,
+				2FDECA9C5285CE846495C136989A73CA /* AnimatedField.xib in Sources */,
+				36AC7A7BCF6F842FCCA6D3BD3814927B /* AnimatedFieldFormat.swift in Sources */,
+				F75470B9BCD0C21B50C7194FDFA7034C /* AnimatedFieldType.swift in Sources */,
+				E3828A87225A083300E444B2 /* IconsLibrary.swift in Sources */,
+				2DF8F55E3ADAFE51C6F63C1FC46109B2 /* Date+Format.swift in Sources */,
+				4EA5CCB60E2F0B342FA85FC91874293D /* String+RegEx.swift in Sources */,
+				D59E5CBCECE02FE0B9E238057681ADFC /* UIView+Nib.swift in Sources */,
+				CEAE6F6475ED03DD96D65A47A25B48AE /* UIView+Shake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6DF8543FB0F9EEC3B80D27841EF99EC3 /* Sources */ = {
+		BAE2613AF570A3717F8A7C82BC644BDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3462A5A9C46A0FA748F75925E7A9F45 /* Pods-AnimatedField_Example-dummy.m in Sources */,
+				936ADEB8063D8F338543CAA22552B30B /* Pods-AnimatedField_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F43FC3F1DDB5C021B555EC285F6D5CBE /* PBXTargetDependency */ = {
+		70187B6E17771E6F45A570313821EB67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AnimatedField;
-			target = C131FFA419258FB1BB0AA4ED15B7C035 /* AnimatedField */;
-			targetProxy = EC13AFBEA2EE8670F25A970D0D7655B2 /* PBXContainerItemProxy */;
+			target = 9FA631C269FD035489D932BE6527E56C /* AnimatedField */;
+			targetProxy = 5E2A840B69A28CDC06751C8657B3FAF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4DF1FDCEC9075B603585CB979FDB6F5E /* Release */ = {
+		1FDE86F8C75CE272669A46ACFD9D2394 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CADE07BE25B06C98CA95BA4D9AE7038 /* AnimatedField.xcconfig */;
+			baseConfigurationReference = D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -400,7 +389,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/AnimatedField/AnimatedField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AnimatedField/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/AnimatedField/AnimatedField-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -410,7 +399,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -419,79 +407,7 @@
 			};
 			name = Release;
 		};
-		7930A2BB3EB4F057BD37FEF8E8AE457A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8BC817F814D9106AE39E90E77F46E42 /* Pods-AnimatedField_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedField_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		97381EF5EC2E3B35207A3D35348CD62D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99C0701ADB4CCBB71928680F0C523741 /* Pods-AnimatedField_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedField_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
+		3048B0C5C704DFFF688DA57F5380ED58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -523,8 +439,65 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5B0C8287D755FD95091CF35D87FB8B2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -551,13 +524,49 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E040288EFD56355247422068C29E9DEE /* Debug */ = {
+		6C1F10F364C3FFC91C687931222F11CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CADE07BE25B06C98CA95BA4D9AE7038 /* AnimatedField.xcconfig */;
+			baseConfigurationReference = A471BFB9710D77F14B629EEB9C86DD22 /* Pods-AnimatedField_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AC6657E6A355EABA8EC5DA3D499D9006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -570,7 +579,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/AnimatedField/AnimatedField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AnimatedField/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/AnimatedField/AnimatedField-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -580,7 +589,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -588,96 +596,72 @@
 			};
 			name = Debug;
 		};
-		EA8C7AF90938697605468604B2A17B9F /* Release */ = {
+		B698B3D094317D1D22D3021F1FC55385 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C0DB54ABAD84395B7E1ED30D6C60A1 /* Pods-AnimatedField_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimatedField_Example/Pods-AnimatedField_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		34313FE0BA54F44F05FF494754E3120D /* Build configuration list for PBXNativeTarget "Pods-AnimatedField_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C92782E717C52E3633C9A5F211E7987A /* Debug */,
-				EA8C7AF90938697605468604B2A17B9F /* Release */,
+				6C1F10F364C3FFC91C687931222F11CF /* Debug */,
+				B698B3D094317D1D22D3021F1FC55385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		661256E50FEF9E3E05A3E04C4874E20B /* Build configuration list for PBXNativeTarget "Pods-AnimatedField_Example" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7930A2BB3EB4F057BD37FEF8E8AE457A /* Debug */,
-				97381EF5EC2E3B35207A3D35348CD62D /* Release */,
+				5B0C8287D755FD95091CF35D87FB8B2D /* Debug */,
+				3048B0C5C704DFFF688DA57F5380ED58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8CE0D02C3BF110D4DD4207E2D69262B /* Build configuration list for PBXNativeTarget "AnimatedField" */ = {
+		9DFE051AE47A059A5B18C53749AA227E /* Build configuration list for PBXNativeTarget "AnimatedField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E040288EFD56355247422068C29E9DEE /* Debug */,
-				4DF1FDCEC9075B603585CB979FDB6F5E /* Release */,
+				AC6657E6A355EABA8EC5DA3D499D9006 /* Debug */,
+				1FDE86F8C75CE272669A46ACFD9D2394 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

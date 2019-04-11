@@ -56,10 +56,12 @@ open class AnimatedField: UIView {
             }
             if case AnimatedFieldType.multiline = type {
                 textField.isHidden = true
+                textField.text = nil
                 textView.isHidden = false
                 setupTextViewConstraints()
             } else {
                 textField.isHidden = false
+                textField.text = ""
                 textView.isHidden = true
                 setupTextFieldConstraints()
             }
@@ -136,6 +138,10 @@ open class AnimatedField: UIView {
             counterLabel.font = format.counterFont
             counterLabel.textColor = format.counterColor
         }
+    }
+    
+    open var text: String? {
+        get { return textField.text ?? textView.text }
     }
     
     override init(frame: CGRect) {
