@@ -141,7 +141,11 @@ open class AnimatedField: UIView {
     }
     
     open var text: String? {
-        get { return textField.text ?? textView.text }
+        get { return textField.isHidden ? textView.text : textField.text }
+        set {
+            textField.text = textField.isHidden ? nil : text
+            textView.text = textView.isHidden ? "" : text
+        }
     }
     
     override init(frame: CGRect) {

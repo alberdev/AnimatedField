@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0AEE01A7DD88AE6D6DF462941972EC22 /* Pods-AnimatedField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64124AF0EA52750C653C3FD75541DD3B /* Pods-AnimatedField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10D6ED83A21069A00EB60899343E9BD7 /* AnimatedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901A0D4E581DA21FB34E981FB22D547 /* AnimatedField.swift */; };
-		2DF8F55E3ADAFE51C6F63C1FC46109B2 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4BD3D7976688FBE282D718B2EC4D5B /* Date+Format.swift */; };
-		2FDECA9C5285CE846495C136989A73CA /* AnimatedField.xib in Sources */ = {isa = PBXBuildFile; fileRef = 7785090E6BF29533702386B8F2FF382D /* AnimatedField.xib */; };
-		32CF29A7CAB184CBC8AA09FA8652C2EA /* AnimatedField+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A9ED887AFF4554C2A80E9AF906F26E /* AnimatedField+TextFieldDelegate.swift */; };
-		36AC7A7BCF6F842FCCA6D3BD3814927B /* AnimatedFieldFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37500CE752F6F3E8D2DE66C3FFF289 /* AnimatedFieldFormat.swift */; };
-		4EA5CCB60E2F0B342FA85FC91874293D /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666F2FA7C907E250F26C1312F47FA760 /* String+RegEx.swift */; };
+		0E18D0437CD05C41643B6E59DB8F8A57 /* AnimatedFieldFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CFB645A08E39E58BEFB8F573874347 /* AnimatedFieldFormat.swift */; };
+		15699A3F10F230DCAC7ADB32294AB109 /* AnimatedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC99D4139D1BE4322D14CB84FAC648 /* AnimatedField.swift */; };
+		198E99117B73A4ED7E54CA5E11AD9586 /* AnimatedField+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA2E1AB60872786CFA387BD9DB1498 /* AnimatedField+Protocols.swift */; };
+		1E57AEA08802074F6D238249F623C3AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		441F912A81103F8FEDEF7A422503A76B /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E60996C156407BE7FC95B238C7A41 /* String+RegEx.swift */; };
+		4E2FF2B2F791490A443299B67E55C1CF /* AnimatedField.xib in Sources */ = {isa = PBXBuildFile; fileRef = B92243622AD6DC50F0930273D0F1D295 /* AnimatedField.xib */; };
+		5144F5E4FB9B52EE0232C6FAC7FA2A15 /* AnimatedFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF996D0FF735F8D99B31FCC55C42F57 /* AnimatedFieldType.swift */; };
+		5D8D2DE4FC564103E3DC876FA2309F9F /* AnimatedField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32852776D955261817ECE0CF9BC79CA0 /* AnimatedField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DA746C174B43F0D8C30F0F829DA4943 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602CCE6104995548E728E6D34AAC75F /* Date+Format.swift */; };
+		62D4656B240A52381C8182F4C47485DB /* AnimatedField+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B26FA3A01462008FE37D6D6DFA900D0 /* AnimatedField+TextViewDelegate.swift */; };
 		65203EF32E0FB9ABFEFE3A27D0F866A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		763376EC74F8E452B2C11A90C2FFDC52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
+		6AE273CE3B54784881B497604D770AAA /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5515C70571BCBBE62628E4A8AEDAEEB /* UIView+Nib.swift */; };
+		7B2DD7E4FC52AE8923B3AB4ED8D34A13 /* IconsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C396E65F4B755686BAAABE0228BF0 /* IconsLibrary.swift */; };
+		86AA0A8AE9F8CDABEC736E3F1F7676D0 /* AnimatedField+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7453DF59F9C314935A553B8C754DC /* AnimatedField+TextFieldDelegate.swift */; };
+		8E68F33C6DC9237E587B0535DC61BF77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
 		936ADEB8063D8F338543CAA22552B30B /* Pods-AnimatedField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A1D19FA550E165F0A4798926725BD3 /* Pods-AnimatedField_Example-dummy.m */; };
-		A5B89A286E0E535BE0E32BF7F9688886 /* AnimatedField+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA4174515DFB123D0FE9A904E98D025 /* AnimatedField+Protocols.swift */; };
-		AAAA404DFA51E0B11C01748C4F7F82AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		CEAE6F6475ED03DD96D65A47A25B48AE /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1364D7057EBEE77F1262FAF02919B /* UIView+Shake.swift */; };
-		D59E5CBCECE02FE0B9E238057681ADFC /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABADD71790722FF20F9319EF2739E8 /* UIView+Nib.swift */; };
-		D816D552CB3346B149D7564D2E1A77FD /* AnimatedField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5E68085075F2A0C70DE679A751C02E /* AnimatedField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3828A87225A083300E444B2 /* IconsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3828A86225A083300E444B2 /* IconsLibrary.swift */; };
-		F06A1B58139D3D225D4F0030ADE3923C /* AnimatedField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C53A3BAD3E675B3BBF6C4ED0047D0D51 /* AnimatedField-dummy.m */; };
-		F75470B9BCD0C21B50C7194FDFA7034C /* AnimatedFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022F238BE45955769375922D0643933 /* AnimatedFieldType.swift */; };
-		FEDB58D25EF23A5F28CBD26ACE336AF9 /* AnimatedField+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858446EC156B52BA19D66E32F208D70C /* AnimatedField+TextViewDelegate.swift */; };
+		BA86BE3D5B1DAB02246B2A453371C9F9 /* AnimatedField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB144310F258422379B004F800EFC /* AnimatedField-dummy.m */; };
+		DC8859046CBF5496EFA0F0265B3135A8 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65280570B87DE2B936E89E76104C0973 /* UIView+Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,49 +40,49 @@
 
 /* Begin PBXFileReference section */
 		01C0DB54ABAD84395B7E1ED30D6C60A1 /* Pods-AnimatedField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedField_Example.release.xcconfig"; sourceTree = "<group>"; };
-		17A9ED887AFF4554C2A80E9AF906F26E /* AnimatedField+TextFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextFieldDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextFieldDelegate.swift"; sourceTree = "<group>"; };
-		1B3740F0F2A5ED4B4BE8183F6743C086 /* Pods_AnimatedField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B37500CE752F6F3E8D2DE66C3FFF289 /* AnimatedFieldFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldFormat.swift; path = AnimatedField/Classes/AnimatedFieldFormat.swift; sourceTree = "<group>"; };
-		1DABADD71790722FF20F9319EF2739E8 /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		1B3740F0F2A5ED4B4BE8183F6743C086 /* Pods_AnimatedField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AnimatedField_Example.framework; path = "Pods-AnimatedField_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E7E4979FCD619A4789BA39625A3503 /* Pods-AnimatedField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimatedField_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3C5E68085075F2A0C70DE679A751C02E /* AnimatedField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-umbrella.h"; sourceTree = "<group>"; };
+		32852776D955261817ECE0CF9BC79CA0 /* AnimatedField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-umbrella.h"; sourceTree = "<group>"; };
+		39057C91ECFC673DB998CF2F8B1D2B6E /* AnimatedField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AnimatedField-Info.plist"; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4EF996D0FF735F8D99B31FCC55C42F57 /* AnimatedFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldType.swift; path = AnimatedField/Classes/AnimatedFieldType.swift; sourceTree = "<group>"; };
+		52884914E2EE95552326882DA5634EF1 /* AnimatedField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AnimatedField.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5349A5B21F7AAB5061165ADAA72AC1AB /* AnimatedField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedField.xcconfig; sourceTree = "<group>"; };
+		62CFB645A08E39E58BEFB8F573874347 /* AnimatedFieldFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldFormat.swift; path = AnimatedField/Classes/AnimatedFieldFormat.swift; sourceTree = "<group>"; };
 		64124AF0EA52750C653C3FD75541DD3B /* Pods-AnimatedField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnimatedField_Example-umbrella.h"; sourceTree = "<group>"; };
-		666F2FA7C907E250F26C1312F47FA760 /* String+RegEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
+		65280570B87DE2B936E89E76104C0973 /* UIView+Shake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		66CE728E24F8DB2CF758E43FA4848D9D /* Pods-AnimatedField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AnimatedField_Example.modulemap"; sourceTree = "<group>"; };
-		6E4BD3D7976688FBE282D718B2EC4D5B /* Date+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
-		718A2F28F38A3A8E4F4ED6FC9E65425A /* AnimatedField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AnimatedField.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		76D1364D7057EBEE77F1262FAF02919B /* UIView+Shake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
-		7785090E6BF29533702386B8F2FF382D /* AnimatedField.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AnimatedField.xib; path = AnimatedField/Classes/AnimatedField.xib; sourceTree = "<group>"; };
-		7D3251CD3F543A2BA8B64D44D32A70DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		858446EC156B52BA19D66E32F208D70C /* AnimatedField+TextViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextViewDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextViewDelegate.swift"; sourceTree = "<group>"; };
-		9C39A9C6A219CFCBF479990D73276B23 /* AnimatedField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6B26FA3A01462008FE37D6D6DFA900D0 /* AnimatedField+TextViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextViewDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextViewDelegate.swift"; sourceTree = "<group>"; };
+		8602CCE6104995548E728E6D34AAC75F /* Date+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		95DA2E1AB60872786CFA387BD9DB1498 /* AnimatedField+Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+Protocols.swift"; path = "AnimatedField/Classes/AnimatedField+Protocols.swift"; sourceTree = "<group>"; };
+		9C39A9C6A219CFCBF479990D73276B23 /* AnimatedField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AnimatedField.framework; path = AnimatedField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1A1D19FA550E165F0A4798926725BD3 /* Pods-AnimatedField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimatedField_Example-dummy.m"; sourceTree = "<group>"; };
 		A471BFB9710D77F14B629EEB9C86DD22 /* Pods-AnimatedField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimatedField_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A901A0D4E581DA21FB34E981FB22D547 /* AnimatedField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedField.swift; path = AnimatedField/Classes/AnimatedField.swift; sourceTree = "<group>"; };
+		A5515C70571BCBBE62628E4A8AEDAEEB /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		B34E60996C156407BE7FC95B238C7A41 /* String+RegEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
+		B8FC99D4139D1BE4322D14CB84FAC648 /* AnimatedField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedField.swift; path = AnimatedField/Classes/AnimatedField.swift; sourceTree = "<group>"; };
+		B92243622AD6DC50F0930273D0F1D295 /* AnimatedField.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AnimatedField.xib; path = AnimatedField/Classes/AnimatedField.xib; sourceTree = "<group>"; };
 		BE9302E98C4740D8661B3CB4B63DA8AC /* Pods-AnimatedField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimatedField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BF5E1CB515DC01E294B59D6782BFEE8C /* AnimatedField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedField.modulemap; sourceTree = "<group>"; };
-		C1FFE864AECB66ECEC77495575D41DED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C53A3BAD3E675B3BBF6C4ED0047D0D51 /* AnimatedField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedField-dummy.m"; sourceTree = "<group>"; };
-		D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedField.xcconfig; sourceTree = "<group>"; };
+		D2C115B53B5B34101A52A152528B4840 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		D50AB8BB7BC46FD823DD79B3D030C56D /* Pods-AnimatedField_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedField_Example-Info.plist"; sourceTree = "<group>"; };
-		D70F0DDDB56E5E9640555807DAE68DB0 /* AnimatedField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-prefix.pch"; sourceTree = "<group>"; };
-		DAA4174515DFB123D0FE9A904E98D025 /* AnimatedField+Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+Protocols.swift"; path = "AnimatedField/Classes/AnimatedField+Protocols.swift"; sourceTree = "<group>"; };
+		D5AB93EEA22EECC102FC763A0CC07FA3 /* AnimatedField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedField.modulemap; sourceTree = "<group>"; };
+		DA2C396E65F4B755686BAAABE0228BF0 /* IconsLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IconsLibrary.swift; sourceTree = "<group>"; };
+		DF6E893E5DE5502EF74FF39639464CD2 /* AnimatedField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedField-prefix.pch"; sourceTree = "<group>"; };
 		E34D15603885E4E171B93CCC2989E97F /* Pods-AnimatedField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimatedField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E3828A86225A083300E444B2 /* IconsLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsLibrary.swift; sourceTree = "<group>"; };
-		E7CE6C5ED05468A2F18649076CAD1C08 /* AnimatedField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AnimatedField-Info.plist"; sourceTree = "<group>"; };
 		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F022F238BE45955769375922D0643933 /* AnimatedFieldType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFieldType.swift; path = AnimatedField/Classes/AnimatedFieldType.swift; sourceTree = "<group>"; };
+		EDD7453DF59F9C314935A553B8C754DC /* AnimatedField+TextFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedField+TextFieldDelegate.swift"; path = "AnimatedField/Classes/AnimatedField+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		F5ECB144310F258422379B004F800EFC /* AnimatedField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedField-dummy.m"; sourceTree = "<group>"; };
+		FD1751A61EE8E5D8F4F29876F4FA2029 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C05025298FE286DC559FD575140A32E /* Frameworks */ = {
+		CE6FD389504E2112BBA84B8CFB09624A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAA404DFA51E0B11C01748C4F7F82AA /* Foundation.framework in Frameworks */,
-				763376EC74F8E452B2C11A90C2FFDC52 /* UIKit.framework in Frameworks */,
+				1E57AEA08802074F6D238249F623C3AD /* Foundation.framework in Frameworks */,
+				8E68F33C6DC9237E587B0535DC61BF77 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,42 +105,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1BC93BF85C9C610C889AE4D765DC625A /* Extensions */ = {
+		32ADDDB64F7D6A390A87673CD97530A6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6E4BD3D7976688FBE282D718B2EC4D5B /* Date+Format.swift */,
-				666F2FA7C907E250F26C1312F47FA760 /* String+RegEx.swift */,
-				1DABADD71790722FF20F9319EF2739E8 /* UIView+Nib.swift */,
-				76D1364D7057EBEE77F1262FAF02919B /* UIView+Shake.swift */,
+				8602CCE6104995548E728E6D34AAC75F /* Date+Format.swift */,
+				B34E60996C156407BE7FC95B238C7A41 /* String+RegEx.swift */,
+				A5515C70571BCBBE62628E4A8AEDAEEB /* UIView+Nib.swift */,
+				65280570B87DE2B936E89E76104C0973 /* UIView+Shake.swift */,
 			);
 			name = Extensions;
 			path = AnimatedField/Classes/Extensions;
 			sourceTree = "<group>";
 		};
-		649F949D748EDF99FECFBFFACAB00A3A /* Pod */ = {
+		4BB30F3B97CD017AD54D823442F64396 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				718A2F28F38A3A8E4F4ED6FC9E65425A /* AnimatedField.podspec */,
-				7D3251CD3F543A2BA8B64D44D32A70DC /* LICENSE */,
-				C1FFE864AECB66ECEC77495575D41DED /* README.md */,
+				DA2C396E65F4B755686BAAABE0228BF0 /* IconsLibrary.swift */,
 			);
-			name = Pod;
+			name = Utils;
+			path = AnimatedField/Classes/Utils;
 			sourceTree = "<group>";
 		};
-		8A4ACCB4E086113805E54C85CE85E9AF /* AnimatedField */ = {
+		6FC4CE6E70C8CEE79B41176E743511D8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E3828A85225A083300E444B2 /* Utils */,
-				A901A0D4E581DA21FB34E981FB22D547 /* AnimatedField.swift */,
-				7785090E6BF29533702386B8F2FF382D /* AnimatedField.xib */,
-				DAA4174515DFB123D0FE9A904E98D025 /* AnimatedField+Protocols.swift */,
-				17A9ED887AFF4554C2A80E9AF906F26E /* AnimatedField+TextFieldDelegate.swift */,
-				858446EC156B52BA19D66E32F208D70C /* AnimatedField+TextViewDelegate.swift */,
-				1B37500CE752F6F3E8D2DE66C3FFF289 /* AnimatedFieldFormat.swift */,
-				F022F238BE45955769375922D0643933 /* AnimatedFieldType.swift */,
-				1BC93BF85C9C610C889AE4D765DC625A /* Extensions */,
-				649F949D748EDF99FECFBFFACAB00A3A /* Pod */,
-				CE21756C30C868B9EEAA78FCC0F61B67 /* Support Files */,
+				D5AB93EEA22EECC102FC763A0CC07FA3 /* AnimatedField.modulemap */,
+				5349A5B21F7AAB5061165ADAA72AC1AB /* AnimatedField.xcconfig */,
+				F5ECB144310F258422379B004F800EFC /* AnimatedField-dummy.m */,
+				39057C91ECFC673DB998CF2F8B1D2B6E /* AnimatedField-Info.plist */,
+				DF6E893E5DE5502EF74FF39639464CD2 /* AnimatedField-prefix.pch */,
+				32852776D955261817ECE0CF9BC79CA0 /* AnimatedField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AnimatedField";
+			sourceTree = "<group>";
+		};
+		73F5A5B04805642D4AB127DF19516586 /* AnimatedField */ = {
+			isa = PBXGroup;
+			children = (
+				B8FC99D4139D1BE4322D14CB84FAC648 /* AnimatedField.swift */,
+				B92243622AD6DC50F0930273D0F1D295 /* AnimatedField.xib */,
+				95DA2E1AB60872786CFA387BD9DB1498 /* AnimatedField+Protocols.swift */,
+				EDD7453DF59F9C314935A553B8C754DC /* AnimatedField+TextFieldDelegate.swift */,
+				6B26FA3A01462008FE37D6D6DFA900D0 /* AnimatedField+TextViewDelegate.swift */,
+				62CFB645A08E39E58BEFB8F573874347 /* AnimatedFieldFormat.swift */,
+				4EF996D0FF735F8D99B31FCC55C42F57 /* AnimatedFieldType.swift */,
+				32ADDDB64F7D6A390A87673CD97530A6 /* Extensions */,
+				997C5D702AF342785FDD1EABAB27CAA7 /* Pod */,
+				6FC4CE6E70C8CEE79B41176E743511D8 /* Support Files */,
+				4BB30F3B97CD017AD54D823442F64396 /* Utils */,
 			);
 			name = AnimatedField;
 			path = ../..;
@@ -152,6 +165,16 @@
 				9E7EE003F907DC6F6A0D3FABFEE3DCB0 /* Pods-AnimatedField_Example */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		997C5D702AF342785FDD1EABAB27CAA7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				52884914E2EE95552326882DA5634EF1 /* AnimatedField.podspec */,
+				D2C115B53B5B34101A52A152528B4840 /* LICENSE */,
+				FD1751A61EE8E5D8F4F29876F4FA2029 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		9E7EE003F907DC6F6A0D3FABFEE3DCB0 /* Pods-AnimatedField_Example */ = {
@@ -171,35 +194,21 @@
 			path = "Target Support Files/Pods-AnimatedField_Example";
 			sourceTree = "<group>";
 		};
-		CE21756C30C868B9EEAA78FCC0F61B67 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF5E1CB515DC01E294B59D6782BFEE8C /* AnimatedField.modulemap */,
-				D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */,
-				C53A3BAD3E675B3BBF6C4ED0047D0D51 /* AnimatedField-dummy.m */,
-				E7CE6C5ED05468A2F18649076CAD1C08 /* AnimatedField-Info.plist */,
-				D70F0DDDB56E5E9640555807DAE68DB0 /* AnimatedField-prefix.pch */,
-				3C5E68085075F2A0C70DE679A751C02E /* AnimatedField-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AnimatedField";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D3E8B1ACCBCCB10263E54869D669DAA3 /* Development Pods */,
+				DB646D45FB1E7E270F6A1298332BF2EC /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				EC238D448414BC3A5B5354020D3FD0C9 /* Products */,
 				8B8AE86644912608185B87FC0D039A25 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D3E8B1ACCBCCB10263E54869D669DAA3 /* Development Pods */ = {
+		DB646D45FB1E7E270F6A1298332BF2EC /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8A4ACCB4E086113805E54C85CE85E9AF /* AnimatedField */,
+				73F5A5B04805642D4AB127DF19516586 /* AnimatedField */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -211,14 +220,6 @@
 				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		E3828A85225A083300E444B2 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				E3828A86225A083300E444B2 /* IconsLibrary.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		EC238D448414BC3A5B5354020D3FD0C9 /* Products */ = {
@@ -233,19 +234,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		16C9E1E89BF5BA1305E81C275E70D204 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D8D2DE4FC564103E3DC876FA2309F9F /* AnimatedField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		742F65BD7E6CA347FC2B8CA3703EA707 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0AEE01A7DD88AE6D6DF462941972EC22 /* Pods-AnimatedField_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFBFD3EC8A422EE5E8F1DD16B596F44B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D816D552CB3346B149D7564D2E1A77FD /* AnimatedField-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,12 +274,12 @@
 		};
 		9FA631C269FD035489D932BE6527E56C /* AnimatedField */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DFE051AE47A059A5B18C53749AA227E /* Build configuration list for PBXNativeTarget "AnimatedField" */;
+			buildConfigurationList = ED379360424FDC1BC74DEC54E5BD5CFE /* Build configuration list for PBXNativeTarget "AnimatedField" */;
 			buildPhases = (
-				AFBFD3EC8A422EE5E8F1DD16B596F44B /* Headers */,
-				A32A21250A821ACB108BD215124AFD1F /* Sources */,
-				4C05025298FE286DC559FD575140A32E /* Frameworks */,
-				6B8772720E589766F3DD69854CBB903C /* Resources */,
+				16C9E1E89BF5BA1305E81C275E70D204 /* Headers */,
+				A4928BEA0C156FBB1B2D6816E08344A0 /* Sources */,
+				CE6FD389504E2112BBA84B8CFB09624A /* Frameworks */,
+				2DFF81899F7A009232B133E10116C986 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -317,7 +318,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6B8772720E589766F3DD69854CBB903C /* Resources */ = {
+		2DFF81899F7A009232B133E10116C986 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,23 +335,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A32A21250A821ACB108BD215124AFD1F /* Sources */ = {
+		A4928BEA0C156FBB1B2D6816E08344A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B89A286E0E535BE0E32BF7F9688886 /* AnimatedField+Protocols.swift in Sources */,
-				32CF29A7CAB184CBC8AA09FA8652C2EA /* AnimatedField+TextFieldDelegate.swift in Sources */,
-				FEDB58D25EF23A5F28CBD26ACE336AF9 /* AnimatedField+TextViewDelegate.swift in Sources */,
-				F06A1B58139D3D225D4F0030ADE3923C /* AnimatedField-dummy.m in Sources */,
-				10D6ED83A21069A00EB60899343E9BD7 /* AnimatedField.swift in Sources */,
-				2FDECA9C5285CE846495C136989A73CA /* AnimatedField.xib in Sources */,
-				36AC7A7BCF6F842FCCA6D3BD3814927B /* AnimatedFieldFormat.swift in Sources */,
-				F75470B9BCD0C21B50C7194FDFA7034C /* AnimatedFieldType.swift in Sources */,
-				E3828A87225A083300E444B2 /* IconsLibrary.swift in Sources */,
-				2DF8F55E3ADAFE51C6F63C1FC46109B2 /* Date+Format.swift in Sources */,
-				4EA5CCB60E2F0B342FA85FC91874293D /* String+RegEx.swift in Sources */,
-				D59E5CBCECE02FE0B9E238057681ADFC /* UIView+Nib.swift in Sources */,
-				CEAE6F6475ED03DD96D65A47A25B48AE /* UIView+Shake.swift in Sources */,
+				198E99117B73A4ED7E54CA5E11AD9586 /* AnimatedField+Protocols.swift in Sources */,
+				86AA0A8AE9F8CDABEC736E3F1F7676D0 /* AnimatedField+TextFieldDelegate.swift in Sources */,
+				62D4656B240A52381C8182F4C47485DB /* AnimatedField+TextViewDelegate.swift in Sources */,
+				BA86BE3D5B1DAB02246B2A453371C9F9 /* AnimatedField-dummy.m in Sources */,
+				15699A3F10F230DCAC7ADB32294AB109 /* AnimatedField.swift in Sources */,
+				4E2FF2B2F791490A443299B67E55C1CF /* AnimatedField.xib in Sources */,
+				0E18D0437CD05C41643B6E59DB8F8A57 /* AnimatedFieldFormat.swift in Sources */,
+				5144F5E4FB9B52EE0232C6FAC7FA2A15 /* AnimatedFieldType.swift in Sources */,
+				5DA746C174B43F0D8C30F0F829DA4943 /* Date+Format.swift in Sources */,
+				7B2DD7E4FC52AE8923B3AB4ED8D34A13 /* IconsLibrary.swift in Sources */,
+				441F912A81103F8FEDEF7A422503A76B /* String+RegEx.swift in Sources */,
+				6AE273CE3B54784881B497604D770AAA /* UIView+Nib.swift in Sources */,
+				DC8859046CBF5496EFA0F0265B3135A8 /* UIView+Shake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +375,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1FDE86F8C75CE272669A46ACFD9D2394 /* Release */ = {
+		293B0AF1B77488209BDE89379A18AA2F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */;
+			baseConfigurationReference = 5349A5B21F7AAB5061165ADAA72AC1AB /* AnimatedField.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -401,11 +402,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		3048B0C5C704DFFF688DA57F5380ED58 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -460,7 +460,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -564,9 +565,9 @@
 			};
 			name = Debug;
 		};
-		AC6657E6A355EABA8EC5DA3D499D9006 /* Debug */ = {
+		9366FCC0551DF5907C740F2174DF23C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3A24DF5085EE461EA29867FEB21AF95 /* AnimatedField.xcconfig */;
+			baseConfigurationReference = 5349A5B21F7AAB5061165ADAA72AC1AB /* AnimatedField.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -591,10 +592,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		B698B3D094317D1D22D3021F1FC55385 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -652,11 +654,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DFE051AE47A059A5B18C53749AA227E /* Build configuration list for PBXNativeTarget "AnimatedField" */ = {
+		ED379360424FDC1BC74DEC54E5BD5CFE /* Build configuration list for PBXNativeTarget "AnimatedField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC6657E6A355EABA8EC5DA3D499D9006 /* Debug */,
-				1FDE86F8C75CE272669A46ACFD9D2394 /* Release */,
+				293B0AF1B77488209BDE89379A18AA2F /* Debug */,
+				9366FCC0551DF5907C740F2174DF23C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
