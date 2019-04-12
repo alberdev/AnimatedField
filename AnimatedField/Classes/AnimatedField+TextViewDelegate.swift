@@ -35,7 +35,7 @@ extension AnimatedField: UITextViewDelegate {
         
         // Limits & Regular expressions
         let limit = dataSource?.animatedFieldLimit(self) ?? Int.max
-        let typingExpression = type?.typingExpression ?? "."
+        let typingExpression = type.typingExpression
         let regex = dataSource?.animatedFieldTypingMatches(self) ?? typingExpression
         
         // Check regular expression
@@ -48,7 +48,7 @@ extension AnimatedField: UITextViewDelegate {
         }
         
         // Check price (if case)
-        if let type = type, newInput != "", case let AnimatedFieldType.price(maxPrice, maxDecimals) = type {
+        if newInput != "", case let AnimatedFieldType.price(maxPrice, maxDecimals) = type {
             
             let newText = "\(textView.text ?? "")\(newInput)"
             
@@ -90,10 +90,10 @@ extension AnimatedField: UITextViewDelegate {
         highlightField(false)
         delegate?.animatedFieldDidEndEditing(self)
         
-        let validationExpression = type?.validationExpression ?? ".*"
+        let validationExpression = type.validationExpression
         let regex = dataSource?.animatedFieldValidationMatches(self) ?? validationExpression
         if let text = textView.text, text != "", !text.isValidWithRegEx(regex) {
-            showAlert(dataSource?.animatedFieldValidationError(self) ?? type?.validationError)
+            showAlert(dataSource?.animatedFieldValidationError(self) ?? type.validationError)
         }
     }
 }

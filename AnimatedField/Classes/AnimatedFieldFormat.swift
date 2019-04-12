@@ -31,6 +31,9 @@ public struct AnimatedFieldFormat {
     /// Counter text color
     public var counterColor = UIColor.darkGray
     
+    /// Enable alert
+    public var alertEnabled = true
+    
     /// Alert status color
     public var alertColor = UIColor.red
     

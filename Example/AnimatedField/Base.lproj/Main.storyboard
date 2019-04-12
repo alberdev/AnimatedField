@@ -99,11 +99,19 @@
                                                     <constraint firstAttribute="height" constant="49" id="MMm-pt-Yc9"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXn-A3-Khw" customClass="AnimatedField" customModule="AnimatedField">
+                                                <rect key="frame" x="35" y="823" width="305" height="49"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="MyP-dI-MdD"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="mDb-Ux-8Eb" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leadingMargin" constant="27" id="54u-4V-hD1"/>
                                             <constraint firstItem="Jh9-K8-M8t" firstAttribute="top" secondItem="cGd-Bu-uZD" secondAttribute="top" constant="28" id="6E0-Ba-Z9z"/>
+                                            <constraint firstItem="bXn-A3-Khw" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leading" constant="35" id="79k-oI-Dtn"/>
                                             <constraint firstItem="Cfh-8i-w4c" firstAttribute="trailing" secondItem="cGd-Bu-uZD" secondAttribute="trailingMargin" constant="-27" id="8V0-z5-Iax"/>
                                             <constraint firstItem="OaO-Wy-wjI" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leading" constant="35" id="Bow-7A-86b"/>
                                             <constraint firstItem="nED-NN-MUv" firstAttribute="top" secondItem="HBe-Ue-dPC" secondAttribute="bottom" constant="30" id="CQu-2e-gha"/>
@@ -120,6 +128,7 @@
                                             <constraint firstItem="Cfh-8i-w4c" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leadingMargin" constant="27" id="crf-CI-bm2"/>
                                             <constraint firstItem="SaH-JA-f6H" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leadingMargin" constant="27" id="eSo-Gz-azI"/>
                                             <constraint firstItem="Jh9-K8-M8t" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leadingMargin" constant="27" id="eTT-qw-rwI"/>
+                                            <constraint firstAttribute="trailing" secondItem="bXn-A3-Khw" secondAttribute="trailing" constant="35" id="eU0-mI-8VL"/>
                                             <constraint firstItem="HBe-Ue-dPC" firstAttribute="top" secondItem="mDb-Ux-8Eb" secondAttribute="bottom" constant="30" id="hqq-SZ-Uz1"/>
                                             <constraint firstItem="nED-NN-MUv" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leadingMargin" constant="27" id="izf-h2-9Ll"/>
                                             <constraint firstItem="gbi-da-dlt" firstAttribute="trailing" secondItem="cGd-Bu-uZD" secondAttribute="trailingMargin" constant="-27" id="l4g-Qr-AxK"/>
@@ -129,6 +138,7 @@
                                             <constraint firstItem="q7C-XU-df5" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leading" constant="35" id="qPc-K4-Yqq"/>
                                             <constraint firstItem="SaH-JA-f6H" firstAttribute="trailing" secondItem="cGd-Bu-uZD" secondAttribute="trailingMargin" constant="-27" id="qya-lA-Rqp"/>
                                             <constraint firstItem="dts-Ae-4x6" firstAttribute="trailing" secondItem="cGd-Bu-uZD" secondAttribute="trailingMargin" constant="-27" id="rCS-Gd-mDD"/>
+                                            <constraint firstItem="bXn-A3-Khw" firstAttribute="top" secondItem="OaO-Wy-wjI" secondAttribute="bottom" constant="30" id="rOn-i6-MHF"/>
                                             <constraint firstItem="HBe-Ue-dPC" firstAttribute="leading" secondItem="cGd-Bu-uZD" secondAttribute="leadingMargin" constant="27" id="tN4-AQ-o0C"/>
                                             <constraint firstItem="gbi-da-dlt" firstAttribute="top" secondItem="dts-Ae-4x6" secondAttribute="bottom" constant="30" id="twI-RD-hu8"/>
                                             <constraint firstItem="nED-NN-MUv" firstAttribute="trailing" secondItem="cGd-Bu-uZD" secondAttribute="trailingMargin" constant="-27" id="ysr-P8-sY5"/>
@@ -158,6 +168,7 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="birthdateAnimatedField" destination="gbi-da-dlt" id="PBo-eS-PEb"/>
+                        <outlet property="defaultField" destination="bXn-A3-Khw" id="onJ-Hp-J65"/>
                         <outlet property="emailAnimatedField" destination="Cfh-8i-w4c" id="c5G-qV-haj"/>
                         <outlet property="multilineAnimatedField" destination="q7C-XU-df5" id="9Y4-lP-Hor"/>
                         <outlet property="multilineHeightConstraint" destination="Rro-TX-kqw" id="dXY-Of-0Wd"/>

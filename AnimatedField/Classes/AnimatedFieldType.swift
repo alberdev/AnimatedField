@@ -10,6 +10,7 @@ import Foundation
 
 public enum AnimatedFieldType {
     
+    case none
     case email
     case username(Int, Int) // min, max
     case password(Int, Int) // min, max

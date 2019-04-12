@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var urlAnimatedField: AnimatedField!
     @IBOutlet weak var numberAnimatedField: AnimatedField!
     @IBOutlet weak var multilineAnimatedField: AnimatedField!
+    @IBOutlet weak var defaultField: AnimatedField!
     @IBOutlet weak var multilineHeightConstraint: NSLayoutConstraint!
     
     deinit {
@@ -111,6 +112,13 @@ class ViewController: UIViewController {
         multilineAnimatedField.delegate = self
         multilineAnimatedField.type = .multiline
         multilineAnimatedField.tag = 8
+        
+        defaultField.format = format
+        defaultField.placeholder = "This is a no-type field"
+        defaultField.dataSource = self
+        defaultField.delegate = self
+        defaultField.isSecure = true
+        defaultField.tag = 9
     }
 }
 

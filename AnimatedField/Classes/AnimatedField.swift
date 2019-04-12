@@ -41,9 +41,8 @@ open class AnimatedField: UIView {
     }
     
     /// Field type (default values)
-    public var type: AnimatedFieldType? {
+    public var type: AnimatedFieldType = .none {
         didSet {
-            guard let type = type else { return }
             if case let AnimatedFieldType.datepicker(defaultDate, minDate, maxDate, chooseText, format) = type {
                 initialDate = defaultDate
                 dateFormat = format
@@ -62,14 +61,10 @@ open class AnimatedField: UIView {
                 keyboardType = .URL
             }
             if case AnimatedFieldType.multiline = type {
-                textField.isHidden = true
-                textField.text = nil
-                textView.isHidden = false
+                showTextView(true)
                 setupTextViewConstraints()
             } else {
-                textField.isHidden = false
-                textField.text = ""
-                textView.isHidden = true
+                showTextView(false)
                 setupTextFieldConstraints()
             }
         }
@@ -175,6 +170,7 @@ open class AnimatedField: UIView {
         setupLine()
         setupEyeButton()
         setupAlertTitle()
+        showTextView(false)
     }
     
     private func setupTextField() {
@@ -197,6 +193,12 @@ open class AnimatedField: UIView {
         textView.contentInset = UIEdgeInsets(top: 13, left: -5, bottom: 6, right: 0)
         textViewDidChange(textView)
         endTextViewPlaceholder()
+    }
+    
+    private func showTextView(_ show: Bool) {
+        textField.isHidden = show
+        textField.text = show ? nil : ""
+        textView.isHidden = !show
     }
     
     private func setupLine() {
@@ -397,6 +399,7 @@ extension AnimatedField: AnimatedFieldInterface {
     }
     
     open func showAlert(_ message: String? = nil) {
+        guard format.alertEnabled else { return }
         textField.textColor = format.alertFieldActive ? format.alertColor : format.textColor
         lineView.backgroundColor = format.alertLineActive ? format.alertColor : format.lineColor
         animateInAlert(message)
