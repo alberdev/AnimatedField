@@ -66,8 +66,10 @@ extension AnimatedField: UITextFieldDelegate {
             }
         }
         
+        if newInput == "" { return true }
+        
         // Check limits
-        return textField.text?.count ?? 0 + newInput.count <= limit
+        return textField.text?.count ?? 0 + newInput.count < limit
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {

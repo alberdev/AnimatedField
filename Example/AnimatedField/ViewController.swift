@@ -42,13 +42,15 @@ class ViewController: UIViewController {
         emailAnimatedField.dataSource = self
         emailAnimatedField.delegate = self
         emailAnimatedField.type = .email
+        emailAnimatedField.tag = 0
         
         usernameAnimatedField.format = format
         usernameAnimatedField.placeholder = "Write your username"
         usernameAnimatedField.dataSource = self
         usernameAnimatedField.delegate = self
         usernameAnimatedField.lowercased = true
-        usernameAnimatedField.type = .username
+        usernameAnimatedField.type = .username(4, 10)
+        usernameAnimatedField.tag = 1
         
         birthdateAnimatedField.format = format
         birthdateAnimatedField.placeholder = "Select your birthday"
@@ -61,12 +63,14 @@ class ViewController: UIViewController {
         let chooseText = "Choose"
         let dateFormat = "dd / MM / yyyy"
         birthdateAnimatedField.type = .datepicker(defaultDate, minDate, maxDate, chooseText, dateFormat)
-        
+        birthdateAnimatedField.tag = 2
+    
         numberAnimatedField.format = format
         numberAnimatedField.placeholder = "Select your age"
         numberAnimatedField.dataSource = self
         numberAnimatedField.delegate = self
         numberAnimatedField.type = .numberpicker(19, 16, 100, chooseText)
+        numberAnimatedField.tag = 3
         
         passwordAnimatedField.format = format
         passwordAnimatedField.placeholder = "New password (min 6, max 10)"
@@ -75,6 +79,7 @@ class ViewController: UIViewController {
         passwordAnimatedField.type = .password(6, 10)
         passwordAnimatedField.isSecure = true
         passwordAnimatedField.showVisibleButton = true
+        passwordAnimatedField.tag = 4
         
         password2AnimatedField.format = format
         password2AnimatedField.placeholder = "Repeat password"
@@ -82,18 +87,21 @@ class ViewController: UIViewController {
         password2AnimatedField.delegate = self
         password2AnimatedField.type = .password(6, 10)
         password2AnimatedField.isSecure = true
+        password2AnimatedField.tag = 5
         
         priceAnimatedField.format = format
         priceAnimatedField.placeholder = "Write the price"
         priceAnimatedField.dataSource = self
         priceAnimatedField.delegate = self
         priceAnimatedField.type = .price(100, 2)
+        priceAnimatedField.tag = 6
         
         urlAnimatedField.format = format
         urlAnimatedField.placeholder = "Write your url web"
         urlAnimatedField.dataSource = self
         urlAnimatedField.delegate = self
         urlAnimatedField.type = .url
+        urlAnimatedField.tag = 7
         
         multilineAnimatedField.format = format
         multilineAnimatedField.format.counterEnabled = true
@@ -102,7 +110,7 @@ class ViewController: UIViewController {
         multilineAnimatedField.dataSource = self
         multilineAnimatedField.delegate = self
         multilineAnimatedField.type = .multiline
-        multilineAnimatedField.tag = 1
+        multilineAnimatedField.tag = 8
     }
 }
 
@@ -145,7 +153,8 @@ extension ViewController: AnimatedFieldDataSource {
     
     func animatedFieldLimit(_ animatedField: AnimatedField) -> Int? {
         switch animatedField.tag {
-        case 1: return 300
+        case 1: return 10
+        case 8: return 300
         default: return nil
         }
     }
