@@ -29,6 +29,10 @@ open class AnimatedField: UIView {
     private var initialDate: Date?
     private var dateFormat: String?
     
+    /// Picker values
+    private var numberPicker: UIPickerView?
+    var numberOptions = [Int]()
+    
     var formatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.locale = Locale.current // USA: Locale(identifier: "en_US")
@@ -40,10 +44,13 @@ open class AnimatedField: UIView {
     public var type: AnimatedFieldType? {
         didSet {
             guard let type = type else { return }
-            if case let AnimatedFieldType.date(defaultDate, minDate, maxDate, chooseText, format) = type {
+            if case let AnimatedFieldType.datepicker(defaultDate, minDate, maxDate, chooseText, format) = type {
                 initialDate = defaultDate
                 dateFormat = format
                 setupDatePicker(minDate: minDate, maxDate: maxDate, chooseText: chooseText)
+            }
+            if case let AnimatedFieldType.numberpicker(defaultNumber, minNumber, maxNumber, chooseText) = type {
+                setupPicker(defaultNumber: defaultNumber, minNumber: minNumber, maxNumber: maxNumber, chooseText: chooseText)
             }
             if case AnimatedFieldType.price = type {
                 keyboardType = .decimalPad
@@ -145,8 +152,8 @@ open class AnimatedField: UIView {
             return textField.isHidden ? textView.text : textField.text
         }
         set {
-            textField.text = textField.isHidden ? nil : text
-            textView.text = textView.isHidden ? "" : text
+            textField.text = textField.isHidden ? nil : newValue
+            textView.text = textView.isHidden ? "" : newValue
         }
     }
     
@@ -240,6 +247,30 @@ open class AnimatedField: UIView {
         textField.inputView = datePicker
     }
     
+    private func setupPicker(defaultNumber: Int, minNumber: Int, maxNumber: Int, chooseText: String?) {
+        
+        numberPicker = UIPickerView()
+        numberPicker?.dataSource = self
+        numberPicker?.delegate = self
+        numberPicker?.setValue(format.textColor, forKey: "textColor")
+        
+        numberOptions += minNumber...maxNumber
+        if let index = numberOptions.index(where: {$0 == defaultNumber}) {
+            numberPicker?.selectRow(index, inComponent:0, animated:false)
+        }
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let chooseButton = UIBarButtonItem(title: chooseText ?? "OK", style: .plain, target: self, action: #selector(didChooseNumberPicker))
+        chooseButton.tintColor = format.textColor
+        chooseButton.tag = 1
+        toolBar.setItems([spaceButton, chooseButton], animated: false)
+        
+        textField.inputAccessoryView = toolBar
+        textField.inputView = numberPicker
+    }
+    
     open override func becomeFirstResponder() -> Bool {
         textField.becomeFirstResponder()
         return super.becomeFirstResponder()
@@ -261,6 +292,11 @@ open class AnimatedField: UIView {
     @objc func didChooseDatePicker() {
         let date = datePicker?.date ?? initialDate
         textField.text = date?.format(dateFormat: dateFormat ?? "dd / MM / yyyy")
+        _ = resignFirstResponder()
+    }
+    
+    @objc func didChooseNumberPicker() {
+//        textField.text = numberPicker
         _ = resignFirstResponder()
     }
 }

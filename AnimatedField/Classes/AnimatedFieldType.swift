@@ -15,7 +15,8 @@ public enum AnimatedFieldType {
     case password(Int, Int) // min, max
     case price(Double, Int) // max price, max decimals
     case url
-    case date(Date?, Date?, Date?, String?, String?) // default date, min date, max date, choose text, date format
+    case datepicker(Date?, Date?, Date?, String?, String?) // default date, min date, max date, choose text, date format
+    case numberpicker(Int, Int, Int, String?) // default number, min number, max number, choose text
     case multiline
     
     var decimal: String {

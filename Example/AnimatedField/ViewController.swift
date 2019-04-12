@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var password2AnimatedField: AnimatedField!
     @IBOutlet weak var priceAnimatedField: AnimatedField!
     @IBOutlet weak var urlAnimatedField: AnimatedField!
+    @IBOutlet weak var numberAnimatedField: AnimatedField!
     @IBOutlet weak var multilineAnimatedField: AnimatedField!
     @IBOutlet weak var multilineHeightConstraint: NSLayoutConstraint!
     
@@ -59,7 +60,13 @@ class ViewController: UIViewController {
         let maxDate = Date().addingTimeInterval(-13 * 365 * 24 * 60 * 60)
         let chooseText = "Choose"
         let dateFormat = "dd / MM / yyyy"
-        birthdateAnimatedField.type = .date(defaultDate, minDate, maxDate, chooseText, dateFormat)
+        birthdateAnimatedField.type = .datepicker(defaultDate, minDate, maxDate, chooseText, dateFormat)
+        
+        numberAnimatedField.format = format
+        numberAnimatedField.placeholder = "Select your age"
+        numberAnimatedField.dataSource = self
+        numberAnimatedField.delegate = self
+        numberAnimatedField.type = .numberpicker(19, 16, 100, chooseText)
         
         passwordAnimatedField.format = format
         passwordAnimatedField.placeholder = "New password (min 6, max 10)"
@@ -121,6 +128,16 @@ extension ViewController: AnimatedFieldDelegate {
         
         let offset = animatedField.frame.origin.y + height - (view.frame.height - 350)
         scrollView.setContentOffset(CGPoint(x: 0, y: offset < 0 ? 0 : offset), animated: false)
+    }
+    
+    func animatedField(_ animatedField: AnimatedField, didSecureText secure: Bool) {
+        if animatedField == passwordAnimatedField {
+            password2AnimatedField.secureField(secure)
+        }
+    }
+    
+    func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: String) {
+        numberAnimatedField.text = value
     }
 }
 

@@ -150,6 +150,15 @@ public protocol AnimatedFieldDelegate: class {
      */
     func animatedField(_ animatedField: AnimatedField, didSecureText secure: Bool)
     
+    /**
+     ------------------------------------------------------------------------------------------
+     Is called when picker value is changed
+     ------------------------------------------------------------------------------------------
+     - parameter animatedField: current animatedField
+     - parameter value: selected value text
+     */
+    func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: String)
+    
 }
 
 public extension AnimatedFieldDelegate {
@@ -167,6 +176,10 @@ public extension AnimatedFieldDelegate {
     }
     
     func animatedField(_ animatedField: AnimatedField, didSecureText secure: Bool) {
+        // Optional
+    }
+    
+    func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: String) {
         // Optional
     }
 }
