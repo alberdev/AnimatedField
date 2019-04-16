@@ -63,7 +63,7 @@ In the example you will see some animated fields that can be used in your projec
 
 Add a `UIView` in the xib where you want to place Animated Field. Then you have to input the class name in the view, you can change this in the identity inspector of the interface builder. Remember to input `AnimatedField` in both (Class & Module)
 
-<img src="https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/screenshot_1.png" alt="Screenshot 1" style="margin: auto" />
+<img src="https://github.com/alberdev/AnimatedField/blob/master/Images/screenshot_1.png?raw=true" alt="Screenshot 1" style="margin: auto" />
 
 Then, connect the IBOutlet in your UIViewController
 
