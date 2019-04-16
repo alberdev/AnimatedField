@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/cocoapods/v/AnimatedField.svg?style=flat&colorB=008B60)](https://cocoapods.org/pods/AnimatedField)
 [![License](https://img.shields.io/cocoapods/l/AnimatedField.svg?style=flat)](https://cocoapods.org/pods/AnimatedField)
 [![Platform](https://img.shields.io/cocoapods/p/AnimatedField.svg?style=flat)](https://cocoapods.org/pods/AnimatedField)
-![Swift](https://img.shields.io/badge/%20in-swift%204.2-orange.svg?style=flat&colorB=008B60)
+![Swift](https://img.shields.io/badge/%20in-swift%205.0-orange.svg?style=flat&colorB=008B60)
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ You can use `AnimatedField` as an iOS UITextField/UITextView component. You can 
 - [x] Check & filter with regular expressions
 - [x] Limit text length
 - [x] Easy usage
-- [x] Supports iOS, developed in Swift 4
+- [x] Supports iOS, developed in Swift 5
 
 ## Example
 
@@ -327,7 +327,7 @@ AnimatedFieldType.url
 
 ### Date picker
 
-This type will show date picker view. Fill it with `default date`, `min date`, `max date`, `done label text`, `date format`.
+This type will show date picker view. Fill it with `default date`, `min date`, `max date`, `done label text`, `date format` (Example: "dd / MM / yyyy").
 
 ```swift
 AnimatedFieldType.datepicker(Date?, Date?, Date?, String?, String?)
