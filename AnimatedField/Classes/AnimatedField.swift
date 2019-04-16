@@ -417,17 +417,17 @@ extension AnimatedField: AnimatedFieldInterface {
         textField.text = ""
     }
     
-    open func showNormal() {
-        textField.textColor = format.textColor
-        lineView.backgroundColor = format.lineColor
-        animateOutAlert()
-    }
-    
     open func showAlert(_ message: String? = nil) {
         guard format.alertEnabled else { return }
         textField.textColor = format.alertFieldActive ? format.alertColor : format.textColor
         lineView.backgroundColor = format.alertLineActive ? format.alertColor : format.lineColor
         animateInAlert(message)
+    }
+    
+    open func hideAlert() {
+        textField.textColor = format.textColor
+        lineView.backgroundColor = format.lineColor
+        animateOutAlert()
     }
     
     open func secureField(_ secure: Bool) {

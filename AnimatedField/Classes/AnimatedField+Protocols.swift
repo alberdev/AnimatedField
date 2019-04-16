@@ -159,6 +159,14 @@ public protocol AnimatedFieldDelegate: class {
      */
     func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: String)
     
+    /**
+     ------------------------------------------------------------------------------------------
+     Is called when alert message is shown
+     ------------------------------------------------------------------------------------------
+     - parameter animatedField: current animatedField
+     - parameter value: alert text
+     */
+    func animatedField(_ animatedField: AnimatedField, didShowAlertMessage text: String)
 }
 
 public extension AnimatedFieldDelegate {
@@ -182,6 +190,10 @@ public extension AnimatedFieldDelegate {
     func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: String) {
         // Optional
     }
+    
+    func animatedField(_ animatedField: AnimatedField, didShowAlertMessage text: String) {
+        // Optional
+    }
 }
 
 public protocol AnimatedFieldInterface {
@@ -195,18 +207,18 @@ public protocol AnimatedFieldInterface {
     
     /**
      ------------------------------------------------------------------------------------------
-     Show normal status
-     ------------------------------------------------------------------------------------------
-     */
-    func showNormal()
-    
-    /**
-     ------------------------------------------------------------------------------------------
      Show alert status
      ------------------------------------------------------------------------------------------
      - parameter message: alert message
      */
     func showAlert(_ message: String?)
+    
+    /**
+     ------------------------------------------------------------------------------------------
+     Hide alert message
+     ------------------------------------------------------------------------------------------
+     */
+    func hideAlert()
     
     /**
      ------------------------------------------------------------------------------------------

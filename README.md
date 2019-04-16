@@ -36,6 +36,10 @@ You can use `AnimatedField` as an iOS UITextField/UITextView component. You can 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+<p align="center" >
+<img src="https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/video.gif" alt="AnimatedField" title="AnimatedField demo">
+</p>
+
 ## Installation
 
 AnimatedField is available through [CocoaPods](https://cocoapods.org). To install
@@ -50,6 +54,301 @@ Then you can import it when you need
 ```swift
 import AnimatedField
 ```
+
+## Usage
+
+In the example you will see some animated fields that can be used in your project. Once you've installed the pod, follow next steps. It's really simple:
+
+### UIView in your xib / storyboard
+
+Add a `UIView` in the xib where you want to place Animated Field. Then you have to input the class name in the view, you can change this in the identity inspector of the interface builder. Remember to input `AnimatedField` in both (Class & Module)
+
+<img src="https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/screenshot_1.png" alt="Screenshot 1" style="margin: auto" />
+
+Then, connect the IBOutlet in your UIViewController
+
+```swift
+@IBOutlet weak var animatedField: AnimatedField!
+```
+
+### Format
+
+You can format `AnimatedField` with your own parameters. Use it in all fields to get the same style. See default values:
+ 
+```swift
+var format = AnimatedFieldFormat()
+
+/// Font for title label
+format.titleFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+    
+/// Font for text field
+format.textFont = UIFont.systemFont(ofSize: 16, weight: .regular)
+    
+/// Font for counter
+format.counterFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+    
+/// Line color
+format.lineColor = UIColor.lightGray
+    
+/// Title label text color
+format.titleColor = UIColor.lightGray
+    
+/// TextField text color
+format.textColor = UIColor.darkGray
+    
+/// Counter text color
+format.counterColor = UIColor.darkGray
+    
+/// Enable alert
+format.alertEnabled = true
+    
+/// Alert status color
+format.alertColor = UIColor.red
+    
+/// Colored alert field text
+format.alertFieldActive = true
+    
+/// Colored alert line
+format.alertLineActive = true
+    
+/// Colored alert title
+format. alertTitleActive = true
+    
+/// Secure icon image (On status)
+format.visibleOnImage = IconsLibrary.imageOfEye(color: .red)
+    
+/// Secure icon image (Off status)
+format.visibleOffImage = IconsLibrary.imageOfEyeoff(color: .red)
+    
+/// Enable counter label
+format.counterEnabled = false
+    
+/// Set count down if counter is enabled
+format.countDown = false
+    
+/// Highlight color when becomes active
+format.highlightColor: UIColor? = UIColor(displayP3Red: 0, green: 139/255, blue: 96/255, alpha: 1.0)
+```
+
+Is important to finally assign format to `AnimatedField`
+
+```swift
+animatedField.format = format
+```
+
+### Other field properties
+
+There are other some animated field properties you can use in your implementation:
+
+```swift
+/// Object that configure `AnimatedField` view. You can setup `AnimatedField` with
+/// your own parameters. See also `AnimatedFieldFormat` implementation.
+animatedField.format = AnimatedFieldFormat()
+
+/// Field type (default values)
+animatedField.type = AnimatedFieldType.none
+
+/// Field text
+animatedField.text = "" 
+
+/// Placeholder
+animatedField.placeholder = "" 
+
+/// Uppercased field format
+animatedField.uppercased = false
+    
+/// Lowercased field format
+animatedField.lowercased = false
+    
+/// Keyboard type
+animatedFieldkeyboardType = UIKeyboardType.alphabet 
+    
+/// Secure field (dot format)
+animatedField.isSecure = false
+    
+/// Show visible button to make field unsecure
+animatedField.showVisibleButton = false
+
+/// Result of regular expression validation
+let isValid = animatedField.isValid
+```
+
+### Implement datasource and delegate
+
+The first way to customize this `AnimatedField` is implementing delegate and datasource methods. These methods handle the most common use cases. Both of them are optional. 
+
+```swift
+animatedField.dataSource = self
+animatedField.delegate = self
+```
+
+### DataSource
+
+Is used to provide data for the field view. The data source must adopt the `AnimatedFieldDataSource` protocol
+
+```swift
+// Returns boolean to check if field can be changed. This will override custom implementation.
+func animatedField(_ animatedField: AnimatedField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool? 
+
+// Returns boolean to check if field can return
+func animatedFieldShouldReturn(_ animatedField: AnimatedField) -> Bool 
+
+// Needed for limit characters when user fills the field. Returns characters limit
+func animatedFieldLimit(_ animatedField: AnimatedField) -> Int?
+
+// Needed for validation when user is filling the field. Returns regular expression to filter characters when user is typing
+func animatedFieldTypingMatches(_ animatedField: AnimatedField) -> String? 
+
+// Needed for validation when user ends editing field. Returns regular expression to filter field when user ends editing
+func animatedFieldValidationMatches(_ animatedField: AnimatedField) -> String? 
+
+// Returns alert message when validation fails
+func animatedFieldValidationError(_ animatedField: AnimatedField) -> String?
+
+// Returns alert message when price exceeded limits (only for price type)
+func animatedFieldPriceExceededError(_ animatedField: AnimatedField) -> String? 
+```
+
+### Delegates
+
+In order to add more functionality in your app, you must implement `AnimatedFieldDelegate `. Is the responsible for managing selection behavior and interactions with fields.
+
+```swift
+// Called when text field begin editing 
+func animatedFieldDidBeginEditing(_ animatedField: AnimatedField)
+
+// Called when text field end editing
+func animatedFieldDidEndEditing(_ animatedField: AnimatedField)
+
+// Called when field (multiline) is resized
+func animatedField(_ animatedField: AnimatedField, didResizeHeight height: CGFloat)
+
+// Called when secure button is pressed. 
+// Example: Use it if you like to secure/unsecure other field when this is secured/unsecured (like repeat password field)
+func animatedField(_ animatedField: AnimatedField, didSecureText secure: Bool)
+
+// Called when picker value is changed
+func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: String)
+
+// Called when alert message is shown. 
+// Example: If you have disabled alert messages in field and want to show other kind of message in other view. This will use your own alert messages if you implemented datasource method or default ones if you used default types.
+func animatedField(_ animatedField: AnimatedField, didShowAlertMessage text: String)
+```
+
+### Extra
+
+You can also use next methods for restarting field, showing / hidding alert and secure / unsecure fields.
+
+```swift
+// Restart field (empty field)
+func restart()
+
+// Show alert message
+func showAlert(_ message: String?)
+
+// Hide alert message
+func hideAlert()
+
+// Secure / unsecure field with dots (no visible)
+func secureField(_ secure: Bool)
+```
+
+## Field Types
+
+### Email
+
+This type will show `.emailAddress` keyboard
+
+```swift
+AnimatedFieldType.email
+```
+>Typing regular expression: "[A-Z0-9a-z@_\\.]" 
+
+>Validation regular expression: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+
+### Username
+
+Fill it with `min` & `max` limits for regular expression validation when user ends editing.
+
+```swift
+AnimatedFieldType.username(Int, Int)
+```
+
+>Typing regular expression: "[A-Za-z0-9_.]"
+
+>Validation regular expression: "[A-Za-z0-9_.]{\(min),\(max)}"
+
+### Password
+
+Fill it with `min` & `max` limits for regular expression validation when user ends editing.
+
+```swift
+AnimatedFieldType.password(Int, Int)
+```
+
+>Typing regular expression: ".*" 
+
+>Validation regular expression: ".{\(min),\(max)}"
+
+### Price
+
+Fill it with `max price` & `max decimals`. First, will limit result number. `max decimals` will limit decimals. This type will show `.decimalPad` keyboard.
+
+```swift
+AnimatedFieldType.price(Double, Int)
+```
+>Typing regular expression: "[0-9\(decimal)]"  
+
+>Validation regular expression: "^(?=.\*[1-9])([1-9]\\d*(?:\(decimal)\\d{1,\(max decimals)})?|(?:0\(decimal)\\d{1,\(max decimals)}))$"
+
+- `decimal` depends on locale decimal separator
+
+### Url
+
+This type will show `.URL` keyboard.
+
+```swift
+AnimatedFieldType.url
+```
+>Typing regular expression: ".*" 
+
+>Validation regular expression: "https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,}"
+
+### Date picker
+
+This type will show date picker view. Fill it with `default date`, `min date`, `max date`, `done label text`, `date format`.
+
+```swift
+AnimatedFieldType.datepicker(Date?, Date?, Date?, String?, String?)
+```
+>Typing regular expression: ".*" 
+
+>Validation regular expression: ".*" 
+
+### Number picker
+
+This type will show number picker view. Fill it with `default number`, `min number`, `max number`, `done label text`
+
+```swift
+AnimatedFieldType.numberpicker(Int, Int, Int, String?)
+```
+
+>Typing regular expression: ".*" 
+
+>Validation regular expression: ".*" 
+
+### Multiline
+
+This type will show use multiline text and will resize dynamically when user fills the field. When user completes a new line delegate method `didResizeHeight` is called with updated field height. Use this to offset your scroll view.
+
+```swift
+AnimatedFieldType.multiline
+```
+
+>Typing regular expression: ".*" 
+
+>Validation regular expression: ".*" 
+
 
 ## Author
 

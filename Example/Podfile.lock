@@ -1,5 +1,5 @@
 PODS:
-  - AnimatedField (2.0.1)
+  - AnimatedField (2.0.2)
 
 DEPENDENCIES:
   - AnimatedField (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AnimatedField: 9781cf4962c17c00cdc561dc69973f567ec69cc1
+  AnimatedField: c70f1301d303dde01d43b6ececccafed7182bcd5
 
 PODFILE CHECKSUM: fc475463651d5c3a9e8d48bdd0b0abe4010176a0
 

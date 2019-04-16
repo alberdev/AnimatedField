@@ -78,7 +78,7 @@ extension AnimatedField: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         animateIn()
-        showNormal()
+        hideAlert()
         highlightField(true)
         delegate?.animatedFieldDidBeginEditing(self)
     }
@@ -90,6 +90,7 @@ extension AnimatedField: UITextFieldDelegate {
         
         if let error = validateText(textField.text) {
             showAlert(error)
+            delegate?.animatedField(self, didShowAlertMessage: error)
         }
     }
 }
