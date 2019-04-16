@@ -12,6 +12,7 @@ import AnimatedField
 class ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var emailAnimatedField: AnimatedField!
     @IBOutlet weak var usernameAnimatedField: AnimatedField!
     @IBOutlet weak var birthdateAnimatedField: AnimatedField!
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTap()
+        continueButton.layer.cornerRadius = 5
         
         var format = AnimatedFieldFormat()
         format.titleFont = UIFont(name: "AvenirNext-Regular", size: 14)!
@@ -120,6 +122,10 @@ class ViewController: UIViewController {
         defaultField.isSecure = true
         defaultField.tag = 9
     }
+    
+    @IBAction func didPressContinueButton(_ sender: UIButton) {
+        print("Can continue")
+    }
 }
 
 
@@ -136,6 +142,10 @@ extension ViewController: AnimatedFieldDelegate {
             offset = animatedField.frame.origin.y + animatedField.frame.size.height - scrollView.frame.height + 10
         }
         scrollView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
+        
+        let validEmailUser = emailAnimatedField.isValid && usernameAnimatedField.isValid
+        continueButton.isEnabled = validEmailUser
+        continueButton.alpha = validEmailUser ? 1.0 : 0.3
     }
     
     func animatedField(_ animatedField: AnimatedField, didResizeHeight height: CGFloat) {

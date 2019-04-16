@@ -109,6 +109,11 @@ open class AnimatedField: UIView {
         }
     }
     
+    /// Result of regular expression validation
+    public var isValid: Bool {
+        get { return !(validateText(textField.isHidden ? textView.text : textField.text) != nil) }
+    }
+    
     /////////////////////////////////////////////////////////////////////////////
     /// The object that provides the data for the field view
     /// - Note: The data source must adopt the `AnimatedFieldDataSource` protocol.
@@ -303,7 +308,7 @@ open class AnimatedField: UIView {
     }
 }
 
-// ANIMATIONS
+// CLASS METHODS
 
 extension AnimatedField {
     
@@ -381,6 +386,26 @@ extension AnimatedField {
         guard let color = format.highlightColor else { return }
         titleLabel.textColor = highlight ? color : format.textColor
         lineView.backgroundColor = highlight ? color : format.lineColor
+    }
+    
+    func validateText(_ text: String?) -> String? {
+        
+        let validationExpression = type.validationExpression
+        let regex = dataSource?.animatedFieldValidationMatches(self) ?? validationExpression
+        if let text = text, text != "", !text.isValidWithRegEx(regex) {
+            return dataSource?.animatedFieldValidationError(self) ?? type.validationError
+        }
+        
+        if
+            case let AnimatedFieldType.price(maxPrice, _) = type,
+            let text = text,
+            text != "",
+            let price = formatter.number(from: text),
+            price.doubleValue > maxPrice {
+            return dataSource?.animatedFieldPriceExceededError(self) ?? type.priceExceededError
+        }
+        
+        return nil
     }
 }
 

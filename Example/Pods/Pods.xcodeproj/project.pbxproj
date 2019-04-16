@@ -379,7 +379,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07E4FE7C2AF5DA77755C3A0C164F4B6F /* Debug */ = {
+		06F797BAA0E742B2B0E39CA9E4EEB32E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82619F4902E2D3ECD52DBAB73B077BAB /* AnimatedField.xcconfig */;
 			buildSettings = {
@@ -404,7 +404,40 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1241F63EC57F91F2552E11608C36B13E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82619F4902E2D3ECD52DBAB73B077BAB /* AnimatedField.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AnimatedField/AnimatedField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AnimatedField/AnimatedField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AnimatedField/AnimatedField.modulemap";
+				PRODUCT_MODULE_NAME = AnimatedField;
+				PRODUCT_NAME = AnimatedField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -535,39 +568,6 @@
 			};
 			name = Debug;
 		};
-		5F3A1186069ED03D3DAF12579A63AC64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82619F4902E2D3ECD52DBAB73B077BAB /* AnimatedField.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AnimatedField/AnimatedField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AnimatedField/AnimatedField-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AnimatedField/AnimatedField.modulemap";
-				PRODUCT_MODULE_NAME = AnimatedField;
-				PRODUCT_NAME = AnimatedField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		6C1F10F364C3FFC91C687931222F11CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A471BFB9710D77F14B629EEB9C86DD22 /* Pods-AnimatedField_Example.debug.xcconfig */;
@@ -661,8 +661,8 @@
 		72E67F9D762635DF505221A82796D93B /* Build configuration list for PBXNativeTarget "AnimatedField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07E4FE7C2AF5DA77755C3A0C164F4B6F /* Debug */,
-				5F3A1186069ED03D3DAF12579A63AC64 /* Release */,
+				1241F63EC57F91F2552E11608C36B13E /* Debug */,
+				06F797BAA0E742B2B0E39CA9E4EEB32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

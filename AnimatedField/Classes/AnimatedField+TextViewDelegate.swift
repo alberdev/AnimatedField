@@ -90,10 +90,8 @@ extension AnimatedField: UITextViewDelegate {
         highlightField(false)
         delegate?.animatedFieldDidEndEditing(self)
         
-        let validationExpression = type.validationExpression
-        let regex = dataSource?.animatedFieldValidationMatches(self) ?? validationExpression
-        if let text = textView.text, text != "", !text.isValidWithRegEx(regex) {
-            showAlert(dataSource?.animatedFieldValidationError(self) ?? type.validationError)
+        if let error = validateText(textView.text) {
+            showAlert(error)
         }
     }
 }

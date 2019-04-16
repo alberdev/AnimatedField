@@ -88,19 +88,8 @@ extension AnimatedField: UITextFieldDelegate {
         highlightField(false)
         delegate?.animatedFieldDidEndEditing(self)
         
-        let validationExpression = type.validationExpression
-        let regex = dataSource?.animatedFieldValidationMatches(self) ?? validationExpression
-        if let text = textField.text, text != "", !text.isValidWithRegEx(regex) {
-            showAlert(dataSource?.animatedFieldValidationError(self) ?? type.validationError)
-        }
-        
-        if
-            case let AnimatedFieldType.price(maxPrice, _) = type,
-            let text = textField.text,
-            text != "",
-            let price = formatter.number(from: text),
-            price.doubleValue > maxPrice {
-            showAlert(dataSource?.animatedFieldPriceExceededError(self) ?? type.priceExceededError)
+        if let error = validateText(textField.text) {
+            showAlert(error)
         }
     }
 }
