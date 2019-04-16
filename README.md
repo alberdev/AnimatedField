@@ -339,7 +339,7 @@ AnimatedFieldType.numberpicker(Int, Int, Int, String?)
 
 ### Multiline
 
-This type will show use multiline text and will resize dynamically when user fills the field. When user completes a new line delegate method `didResizeHeight` is called with updated field height. Use this to offset your scroll view.
+This type will use multiline text and will resize dynamically when user fills the field. When user completes a new line delegate method `didResizeHeight` is called with updated field height. Use this to offset your scroll view.
 
 ```swift
 AnimatedFieldType.multiline
@@ -364,4 +364,4 @@ Alberto Aznar, info@alberdev.com
 
 ## License
 
-Ciao is available under the MIT license. See the LICENSE file for more info.
+AnimatedField is available under the MIT license. See the LICENSE file for more info.
