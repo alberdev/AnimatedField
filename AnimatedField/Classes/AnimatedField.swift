@@ -262,7 +262,7 @@ open class AnimatedField: UIView {
         numberPicker?.setValue(format.textColor, forKey: "textColor")
         
         numberOptions += minNumber...maxNumber
-        if let index = numberOptions.index(where: {$0 == defaultNumber}) {
+        if let index = numberOptions.firstIndex(where: {$0 == defaultNumber}) {
             numberPicker?.selectRow(index, inComponent:0, animated:false)
         }
         
