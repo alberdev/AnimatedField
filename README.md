@@ -89,6 +89,9 @@ You can format `AnimatedField` with your own parameters. Use it in all fields to
 ```swift
 var format = AnimatedFieldFormat()
 
+/// Title always visible
+format.titleAlwaysVisible = false
+
 /// Font for title label
 format.titleFont = UIFont.systemFont(ofSize: 13, weight: .regular)
     

@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         format.textFont = UIFont(name: "AvenirNext-Regular", size: 16)!
         format.alertColor = .red
         format.alertFieldActive = false
+        format.titleAlwaysVisible = true
         
         emailAnimatedField.format = format
         emailAnimatedField.placeholder = "Write your email"

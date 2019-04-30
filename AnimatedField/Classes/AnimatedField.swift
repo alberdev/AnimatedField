@@ -169,6 +169,7 @@ open class AnimatedField: UIView {
     
     private func commonInit() {
         _ = fromNib()
+        setupView()
         setupTextField()
         setupTextView()
         setupTitle()
@@ -178,16 +179,21 @@ open class AnimatedField: UIView {
         showTextView(false)
     }
     
+    private func setupView() {
+        backgroundColor = .clear
+    }
+    
     private func setupTextField() {
         textField.delegate = self
-        textField.placeholder = placeholder
+        textField.placeholder = format.titleAlwaysVisible ? "" : placeholder
         textField.textColor = format.textColor
         textField.tag = tag
+        textField.backgroundColor = .clear
     }
     
     private func setupTitle() {
-        titleLabel.alpha = 0.0
         titleLabel.text = placeholder
+        titleLabel.alpha = format.titleAlwaysVisible ? 1.0 : 0.0
     }
     
     private func setupTextView() {

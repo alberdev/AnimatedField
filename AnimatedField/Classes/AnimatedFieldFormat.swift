@@ -10,6 +10,9 @@ import Foundation
 
 public struct AnimatedFieldFormat {
     
+    /// Title always visible
+    public var titleAlwaysVisible = false
+    
     /// Font for title label
     public var titleFont = UIFont.systemFont(ofSize: 13, weight: .regular)
     
