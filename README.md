@@ -28,6 +28,7 @@
 	- [Date picker](#datepicker)
 	- [Number picker](#numberpicker)
 	- [Multiline](#multiline)
+- [Apps using AnimatedField](#apps-using-animatedfield)
 - [Author](#author)
 - [Contributing](#contributing)
 - [License](#license)
@@ -372,12 +373,19 @@ AnimatedFieldType.multiline
 
 >Validation regular expression: ".*" 
 
+## Apps using AnimatedField
+
+If you use `AnimatedField` I'd love to hear about it and feature your app here!
+
+<img src="Images/Apps/fashtime.png" width="50" height="50" valign="middle"> [FashTime](https://itunes.apple.com/app/fashtime-the-new-way/id1126538070?mt=8)
 
 ## Author
 
 Alberto Aznar, info@alberdev.com
 
 ## Contributing
+
+Feel free to collaborate with ideas 💭, issues ⁉️ and/or pull requests 🔃.
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
