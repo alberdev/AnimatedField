@@ -37,6 +37,9 @@ public struct AnimatedFieldFormat {
     /// Enable alert
     public var alertEnabled = true
     
+    /// Font for alert label
+    public var alertFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+    
     /// Alert status color
     public var alertColor = UIColor.red
     
@@ -48,6 +51,9 @@ public struct AnimatedFieldFormat {
     
     /// Colored alert title
     public var alertTitleActive = true
+    
+    /// Alert position
+    public var alertPosition = AnimatedFieldAlertPosition.top
     
     /// Secure icon image (On status)
     public var visibleOnImage = IconsLibrary.imageOfEye(color: .red)

@@ -115,7 +115,10 @@ format.counterColor = UIColor.darkGray
     
 /// Enable alert
 format.alertEnabled = true
-    
+
+/// Font for alert label    
+format.alertFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+
 /// Alert status color
 format.alertColor = UIColor.red
     
@@ -127,6 +130,9 @@ format.alertLineActive = true
     
 /// Colored alert title
 format. alertTitleActive = true
+
+/// Alert position
+format.alertPosition = .top
     
 /// Secure icon image (On status)
 format.visibleOnImage = IconsLibrary.imageOfEye(color: .red)
@@ -142,6 +148,9 @@ format.countDown = false
     
 /// Highlight color when becomes active
 format.highlightColor: UIColor? = UIColor(displayP3Red: 0, green: 139/255, blue: 96/255, alpha: 1.0)
+
+/// Secure image (nil for default eye image)
+format.secureImage: UIImage? = nil
 ```
 
 Is important to finally assign format to `AnimatedField`

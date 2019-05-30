@@ -19,10 +19,11 @@ open class AnimatedField: UIView {
     @IBOutlet weak private var lineView: UIView!
     @IBOutlet weak private var textView: UITextView!
     @IBOutlet weak private var textViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var titleLabelTextFieldConstraint: NSLayoutConstraint?
-    @IBOutlet weak var titleLabelTextViewConstraint: NSLayoutConstraint?
-    @IBOutlet weak var counterLabelTextFieldConstraint: NSLayoutConstraint?
-    @IBOutlet weak var counterLabelTextViewConstraint: NSLayoutConstraint?
+    @IBOutlet weak private var titleLabelTextFieldConstraint: NSLayoutConstraint?
+    @IBOutlet weak private var titleLabelTextViewConstraint: NSLayoutConstraint?
+    @IBOutlet weak private var counterLabelTextFieldConstraint: NSLayoutConstraint?
+    @IBOutlet weak private var counterLabelTextViewConstraint: NSLayoutConstraint?
+    @IBOutlet private var alertLabelBottomConstraint: NSLayoutConstraint!
     
     /// Date picker values
     private var datePicker: UIDatePicker?
@@ -144,6 +145,8 @@ open class AnimatedField: UIView {
             counterLabel.isHidden = !format.counterEnabled
             counterLabel.font = format.counterFont
             counterLabel.textColor = format.counterColor
+            alertLabel.font = format.alertFont
+            alertLabelBottomConstraint.isActive = format.alertPosition == .top
         }
     }
     
@@ -340,9 +343,13 @@ extension AnimatedField {
     
     func animateInAlert(_ message: String?) {
         guard let message = message else { return }
+        
         alertLabel.text = message
         alertLabel.textColor = format.alertTitleActive ? format.alertColor : format.titleColor
         UIView.animate(withDuration: 0.3, animations: { [weak self] in
+            if (self?.format.titleAlwaysVisible ?? true) {
+                self?.titleLabel.alpha = 0.0
+            }
             self?.alertLabel.alpha = 1.0
         }) { [weak self] (completed) in
             self?.alertLabel.shake()
@@ -352,6 +359,7 @@ extension AnimatedField {
     func animateOutAlert() {
         alertLabel.text = ""
         UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.titleLabel.alpha = 1.0
             self?.alertLabel.alpha = 0.0
         }
     }
@@ -390,7 +398,7 @@ extension AnimatedField {
     
     func highlightField(_ highlight: Bool) {
         guard let color = format.highlightColor else { return }
-        titleLabel.textColor = highlight ? color : format.textColor
+        titleLabel.textColor = highlight ? color : format.titleColor
         lineView.backgroundColor = highlight ? color : format.lineColor
     }
     

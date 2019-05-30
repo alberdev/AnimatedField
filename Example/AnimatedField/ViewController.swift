@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         format.alertColor = .red
         format.alertFieldActive = false
         format.titleAlwaysVisible = true
+        format.alertFont = UIFont(name: "AvenirNext-Regular", size: 14)!
         
         emailAnimatedField.format = format
         emailAnimatedField.placeholder = "Write your email"
@@ -176,6 +177,13 @@ extension ViewController: AnimatedFieldDataSource {
         case 8: return 300
         default: return nil
         }
+    }
+    
+    func animatedFieldValidationError(_ animatedField: AnimatedField) -> String? {
+        if animatedField == emailAnimatedField {
+            return "Email invalid! Please check again ;)"
+        }
+        return nil
     }
 }
 
