@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-
+    
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.platform = :ios
@@ -46,5 +46,5 @@ s.source_files      = 'AnimatedField/**/*'
 # ――― Swift Version ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.swift_version     = '5.0'
-
+    
 end
