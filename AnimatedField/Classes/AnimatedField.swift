@@ -41,6 +41,48 @@ open class AnimatedField: UIView {
         return formatter
     }
     
+	var isPlaceholderVisible = false {
+		didSet {
+			
+			guard isPlaceholderVisible else {
+				textField.placeholder = ""
+				textField.attributedPlaceholder = nil
+				return
+			}
+			
+			if let attributedString = attributedPlaceholder {
+				textField.attributedPlaceholder = attributedString
+			} else {
+				textField.placeholder = placeholder
+			}
+		}
+	}
+	
+    /// Placeholder
+    public var placeholder = "" {
+        didSet {
+            setupTextField()
+            setupTextView()
+            setupTitle()
+        }
+    }
+	
+	/// The styled string that is displayed when there is no other text in the text field.
+	///
+	/// This property is nil by default. If set, the placeholder string is drawn using system-defined
+	/// color and the remaining style information (except the text color) of the attributed string.
+	/// Assigning a new value to this property also replaces the value of the placeholder property with
+	/// the same string data, albeit without any formatting information. Assigning a new value to this
+	/// property does not affect any other style-related properties of the text field.
+	public var attributedPlaceholder: NSAttributedString? {
+		didSet {
+			placeholder = attributedPlaceholder?.string ?? ""
+            setupTextField()
+            setupTextView()
+            setupTitle()
+        }
+	}
+	
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
         didSet {
@@ -68,15 +110,6 @@ open class AnimatedField: UIView {
                 showTextView(false)
                 setupTextFieldConstraints()
             }
-        }
-    }
-    
-    /// Placeholder
-    public var placeholder = "" {
-        didSet {
-            setupTextField()
-            setupTextView()
-            setupTitle()
         }
     }
     
@@ -188,10 +221,10 @@ open class AnimatedField: UIView {
     
     private func setupTextField() {
         textField.delegate = self
-        textField.placeholder = format.titleAlwaysVisible ? "" : placeholder
         textField.textColor = format.textColor
         textField.tag = tag
         textField.backgroundColor = .clear
+		isPlaceholderVisible = !format.titleAlwaysVisible
     }
     
     private func setupTitle() {
@@ -322,7 +355,7 @@ open class AnimatedField: UIView {
 extension AnimatedField {
     
     func animateIn() {
-        textField.placeholder = ""
+        isPlaceholderVisible = false
         titleLabelTextViewConstraint?.constant = 1
         titleLabelTextFieldConstraint?.constant = 1
         UIView.animate(withDuration: 0.3) { [weak self] in
@@ -332,7 +365,7 @@ extension AnimatedField {
     }
     
     func animateOut() {
-        textField.placeholder = placeholder
+        isPlaceholderVisible = true
         titleLabelTextViewConstraint?.constant = -20
         titleLabelTextFieldConstraint?.constant = -20
         UIView.animate(withDuration: 0.3) { [weak self] in

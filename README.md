@@ -178,6 +178,10 @@ animatedField.text = ""
 /// Placeholder
 animatedField.placeholder = "" 
 
+/// Attributed Placeholder
+animatedField.attributedPlaceholder = NSAttributedString(string: "Placeholder", 
+                                                         attributes:[.foregroundColor: UIColor.white])
+
 /// Uppercased field format
 animatedField.uppercased = false
     
