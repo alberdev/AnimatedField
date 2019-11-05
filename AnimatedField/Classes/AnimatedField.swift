@@ -83,6 +83,14 @@ open class AnimatedField: UIView {
         }
 	}
 	
+	/// The input accessory view for this field
+	public var accessoryView: UIView? {
+		didSet {
+			textField.inputAccessoryView = accessoryView
+			textView.inputAccessoryView = accessoryView
+		}
+	}
+	
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
         didSet {
@@ -303,7 +311,7 @@ open class AnimatedField: UIView {
         chooseButton.tag = 1
         toolBar.setItems([spaceButton, chooseButton], animated: false)
         
-        textField.inputAccessoryView = toolBar
+        textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = datePicker
     }
     
@@ -327,7 +335,7 @@ open class AnimatedField: UIView {
         chooseButton.tag = 1
         toolBar.setItems([spaceButton, chooseButton], animated: false)
         
-        textField.inputAccessoryView = toolBar
+        textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = numberPicker
     }
     
