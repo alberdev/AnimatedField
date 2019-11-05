@@ -40,7 +40,7 @@ open class AnimatedField: UIView {
         formatter.numberStyle = .decimal
         return formatter
     }
-    
+	
 	var isPlaceholderVisible = false {
 		didSet {
 			
@@ -82,6 +82,23 @@ open class AnimatedField: UIView {
             setupTitle()
         }
 	}
+    
+	var isPlaceholderVisible = false {
+		didSet {
+			
+			guard isPlaceholderVisible else {
+				textField.placeholder = ""
+				textField.attributedPlaceholder = nil
+				return
+			}
+			
+			if let attributedString = attributedPlaceholder {
+				textField.attributedPlaceholder = attributedString
+			} else {
+				textField.placeholder = placeholder
+			}
+		}
+	}
 	
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
@@ -112,6 +129,13 @@ open class AnimatedField: UIView {
             }
         }
     }
+	
+	public var keyboardAppearance: UIKeyboardAppearance = .default {
+		didSet {
+			textField.keyboardAppearance = keyboardAppearance
+			textView.keyboardAppearance = keyboardAppearance
+		}
+	}
     
     /// Uppercased field format
     public var uppercased = false
@@ -123,6 +147,10 @@ open class AnimatedField: UIView {
     public var keyboardType = UIKeyboardType.alphabet {
         didSet { textField.keyboardType = keyboardType }
     }
+	
+	public var keyboardToolbar: UIToolbar? {
+		didSet { textField.inputView = keyboardToolbar }
+	}
     
     /// Secure field (dot format)
     public var isSecure = false {
