@@ -82,23 +82,6 @@ open class AnimatedField: UIView {
             setupTitle()
         }
 	}
-    
-	var isPlaceholderVisible = false {
-		didSet {
-			
-			guard isPlaceholderVisible else {
-				textField.placeholder = ""
-				textField.attributedPlaceholder = nil
-				return
-			}
-			
-			if let attributedString = attributedPlaceholder {
-				textField.attributedPlaceholder = attributedString
-			} else {
-				textField.placeholder = placeholder
-			}
-		}
-	}
 	
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
