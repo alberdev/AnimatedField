@@ -8,6 +8,21 @@
 
 import UIKit
 
+extension UIToolbar {
+	
+	convenience init(target: Any, selector: Selector) {
+		
+		let rect = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 44.0)
+		let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+		let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: target, action: selector)
+		
+		self.init(frame: rect)
+		barStyle = .black
+		tintColor = .white
+		setItems([flexible, barButton], animated: false)
+	}
+}
+
 open class AnimatedField: UIView {
     
     @IBOutlet weak private var textField: UITextField!
@@ -303,14 +318,8 @@ open class AnimatedField: UIView {
         datePicker?.minimumDate = minDate
         datePicker?.setValue(format.textColor, forKey: "textColor")
         
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let chooseButton = UIBarButtonItem(title: chooseText ?? "OK", style: .plain, target: self, action: #selector(didChooseDatePicker))
-        chooseButton.tintColor = format.textColor
-        chooseButton.tag = 1
-        toolBar.setItems([spaceButton, chooseButton], animated: false)
-        
+        let toolBar = UIToolbar(target: self, selector: #selector(didChooseDatePicker))
+		
         textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = datePicker
     }
@@ -327,14 +336,8 @@ open class AnimatedField: UIView {
             numberPicker?.selectRow(index, inComponent:0, animated:false)
         }
         
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let chooseButton = UIBarButtonItem(title: chooseText ?? "OK", style: .plain, target: self, action: #selector(didChooseNumberPicker))
-        chooseButton.tintColor = format.textColor
-        chooseButton.tag = 1
-        toolBar.setItems([spaceButton, chooseButton], animated: false)
-        
+		let toolBar = UIToolbar(target: self, selector: #selector(didChooseNumberPicker))
+		
         textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = numberPicker
     }
