@@ -8,6 +8,21 @@
 
 import UIKit
 
+extension UIToolbar {
+	
+	convenience init(target: Any, selector: Selector) {
+		
+		let rect = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 44.0)
+		let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+		let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: target, action: selector)
+		
+		self.init(frame: rect)
+		barStyle = .black
+		tintColor = .white
+		setItems([flexible, barButton], animated: false)
+	}
+}
+
 open class AnimatedField: UIView {
     
     @IBOutlet weak private var textField: UITextField!
@@ -40,7 +55,57 @@ open class AnimatedField: UIView {
         formatter.numberStyle = .decimal
         return formatter
     }
-    
+	
+	var isPlaceholderVisible = false {
+		didSet {
+			
+			guard isPlaceholderVisible else {
+				textField.placeholder = ""
+				textField.attributedPlaceholder = nil
+				return
+			}
+			
+			if let attributedString = attributedPlaceholder {
+				textField.attributedPlaceholder = attributedString
+			} else {
+				textField.placeholder = placeholder
+			}
+		}
+	}
+	
+    /// Placeholder
+    public var placeholder = "" {
+        didSet {
+            setupTextField()
+            setupTextView()
+            setupTitle()
+        }
+    }
+	
+	/// The styled string that is displayed when there is no other text in the text field.
+	///
+	/// This property is nil by default. If set, the placeholder string is drawn using system-defined
+	/// color and the remaining style information (except the text color) of the attributed string.
+	/// Assigning a new value to this property also replaces the value of the placeholder property with
+	/// the same string data, albeit without any formatting information. Assigning a new value to this
+	/// property does not affect any other style-related properties of the text field.
+	public var attributedPlaceholder: NSAttributedString? {
+		didSet {
+			placeholder = attributedPlaceholder?.string ?? ""
+            setupTextField()
+            setupTextView()
+            setupTitle()
+        }
+	}
+	
+	/// The input accessory view for this field
+	public var accessoryView: UIView? {
+		didSet {
+			textField.inputAccessoryView = accessoryView
+			textView.inputAccessoryView = accessoryView
+		}
+	}
+	
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
         didSet {
@@ -70,15 +135,13 @@ open class AnimatedField: UIView {
             }
         }
     }
-    
-    /// Placeholder
-    public var placeholder = "" {
-        didSet {
-            setupTextField()
-            setupTextView()
-            setupTitle()
-        }
-    }
+	
+	public var keyboardAppearance: UIKeyboardAppearance = .default {
+		didSet {
+			textField.keyboardAppearance = keyboardAppearance
+			textView.keyboardAppearance = keyboardAppearance
+		}
+	}
     
     /// Uppercased field format
     public var uppercased = false
@@ -90,6 +153,10 @@ open class AnimatedField: UIView {
     public var keyboardType = UIKeyboardType.alphabet {
         didSet { textField.keyboardType = keyboardType }
     }
+	
+	public var keyboardToolbar: UIToolbar? {
+		didSet { textField.inputView = keyboardToolbar }
+	}
     
     /// Secure field (dot format)
     public var isSecure = false {
@@ -188,10 +255,10 @@ open class AnimatedField: UIView {
     
     private func setupTextField() {
         textField.delegate = self
-        textField.placeholder = format.titleAlwaysVisible ? "" : placeholder
         textField.textColor = format.textColor
         textField.tag = tag
         textField.backgroundColor = .clear
+		isPlaceholderVisible = !format.titleAlwaysVisible
     }
     
     private func setupTitle() {
@@ -251,15 +318,9 @@ open class AnimatedField: UIView {
         datePicker?.minimumDate = minDate
         datePicker?.setValue(format.textColor, forKey: "textColor")
         
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let chooseButton = UIBarButtonItem(title: chooseText ?? "OK", style: .plain, target: self, action: #selector(didChooseDatePicker))
-        chooseButton.tintColor = format.textColor
-        chooseButton.tag = 1
-        toolBar.setItems([spaceButton, chooseButton], animated: false)
-        
-        textField.inputAccessoryView = toolBar
+        let toolBar = UIToolbar(target: self, selector: #selector(didChooseDatePicker))
+		
+        textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = datePicker
     }
     
@@ -275,15 +336,9 @@ open class AnimatedField: UIView {
             numberPicker?.selectRow(index, inComponent:0, animated:false)
         }
         
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let chooseButton = UIBarButtonItem(title: chooseText ?? "OK", style: .plain, target: self, action: #selector(didChooseNumberPicker))
-        chooseButton.tintColor = format.textColor
-        chooseButton.tag = 1
-        toolBar.setItems([spaceButton, chooseButton], animated: false)
-        
-        textField.inputAccessoryView = toolBar
+		let toolBar = UIToolbar(target: self, selector: #selector(didChooseNumberPicker))
+		
+        textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = numberPicker
     }
     
@@ -322,7 +377,7 @@ open class AnimatedField: UIView {
 extension AnimatedField {
     
     func animateIn() {
-        textField.placeholder = ""
+        isPlaceholderVisible = false
         titleLabelTextViewConstraint?.constant = 1
         titleLabelTextFieldConstraint?.constant = 1
         UIView.animate(withDuration: 0.3) { [weak self] in
@@ -332,7 +387,7 @@ extension AnimatedField {
     }
     
     func animateOut() {
-        textField.placeholder = placeholder
+        isPlaceholderVisible = true
         titleLabelTextViewConstraint?.constant = -20
         titleLabelTextFieldConstraint?.constant = -20
         UIView.animate(withDuration: 0.3) { [weak self] in
