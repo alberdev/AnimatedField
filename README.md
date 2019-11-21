@@ -1,16 +1,61 @@
 ![AnimatedField logo](https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/header_AnimatedField.png)
 
+<p align="center">
+   <img width="500" src="https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/header_AnimatedField.png" alt="AnimatedField  Logo">
+</p>
+
+<p align="center">
+   <a href="https://cocoapods.org/pods/AnimatedField">
+      <img src="https://img.shields.io/cocoapods/v/AnimatedField.svg?style=flat&colorB=008B60" alt="Version">
+   </a>
+   <!--
+   <a href="https://github.com/Carthage/Carthage">
+      <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible">
+   </a>
+   -->
+   <a href="https://cocoapods.org/pods/AnimatedField">
+      <img src="https://img.shields.io/cocoapods/l/AnimatedField.svg?style=flat)" alt="License">
+   </a>
+   <a href="https://developer.apple.com/swift/">
+      <img src="https://img.shields.io/badge/Swift-5.0-blue.svg?style=flat&colorB=008B60" alt="Swift 5.0">
+   </a>
+   <a href="https://cocoapods.org/pods/AnimatedField">
+      <img src="https://img.shields.io/cocoapods/p/AnimatedField.svg?style=flat&colorB=008B60" alt="Platform">
+   </a>
+   <!--
+   <a href="https://alberdev.github.io/AnimatedField">
+      <img src="https://github.com/alberdev/AnimatedField/blob/gh-pages/badge.svg" alt="Documentation">
+   </a>
+   -->
+   <a href="https://twitter.com/alberdev/">
+      <img src="https://img.shields.io/badge/Twitter-@alberdev-blue.svg?style=flat&colorB=30CEF2" alt="Twitter">
+   </a>
+   
+</p>
+
+<br/>
+
+<p align="center">
+   You can use <b>AnimatedField</b> as an iOS UITextField/UITextView component. You can check fields with your custom regular expressions or use default ones ordered by types (email, username, password, url, price...). Also can check the field while user is typing in a dynamic way. Limit the text lenght and format fields in your way. Replace your old and bored textfields and textviews with these fancy animated fields. You only need to follow some simple steps to implement it. AnimatedField is customizable and easy to use.
+</p>
+
+<br/>
+
+<p align="center" >
+<img src="https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/video.gif" alt="AnimatedField" title="AnimatedField demo">
+</p>
+
 # AnimatedField
 
-[![Version](https://img.shields.io/cocoapods/v/AnimatedField.svg?style=flat&colorB=008B60)](https://cocoapods.org/pods/AnimatedField)
-[![License](https://img.shields.io/cocoapods/l/AnimatedField.svg?style=flat)](https://cocoapods.org/pods/AnimatedField)
-[![Platform](https://img.shields.io/cocoapods/p/AnimatedField.svg?style=flat)](https://cocoapods.org/pods/AnimatedField)
-![Swift](https://img.shields.io/badge/%20in-swift%205.0-orange.svg?style=flat&colorB=008B60)
+- [x] Awesome animations on begin editing field
+- [x] Totally customizable
+- [x] Check & filter with regular expressions
+- [x] Limit text length
+- [x] Easy usage
+- [x] Supports iOS, developed in Swift 5
 
 ## Table of Contents
 
-- [Description](#description)
-- [Example](#example)
 - [Installation](#installation)
 - [Usage](#usage)
   - [UIView in your xib / storyboard](#uiviewinyourxib/storyboard)
@@ -33,24 +78,6 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-## Description
-
-You can use `AnimatedField` as an iOS UITextField/UITextView component. You can check fields with your custom regular expressions or use default ones ordered by types (email, username, password, url, price...). Also can check the field while user is typing in a dynamic way. Limit the text lenght and format fields in your way. Replace your old and bored textfields and textviews with these fancy animated fields. You only need to follow some simple steps to implement it. AnimatedField is customizable and easy to use.
-
-- [x] Awesome animations on begin editing field
-- [x] Totally customizable
-- [x] Check & filter with regular expressions
-- [x] Limit text length
-- [x] Easy usage
-- [x] Supports iOS, developed in Swift 5
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-<p align="center" >
-<img src="https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/video.gif" alt="AnimatedField" title="AnimatedField demo">
-</p>
 
 ## Installation
 
