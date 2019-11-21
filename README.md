@@ -1,5 +1,3 @@
-![AnimatedField logo](https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/header_AnimatedField.png)
-
 <p align="center">
    <img width="500" src="https://raw.githubusercontent.com/alberdev/AnimatedField/master/Images/header_AnimatedField.png" alt="AnimatedField  Logo">
 </p>
