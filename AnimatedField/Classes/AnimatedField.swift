@@ -109,10 +109,10 @@ open class AnimatedField: UIView {
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
         didSet {
-            if case let AnimatedFieldType.datepicker(defaultDate, minDate, maxDate, chooseText, format) = type {
+            if case let AnimatedFieldType.datepicker(mode, defaultDate, minDate, maxDate, chooseText, format) = type {
                 initialDate = defaultDate
                 dateFormat = format
-                setupDatePicker(minDate: minDate, maxDate: maxDate, chooseText: chooseText)
+                setupDatePicker(mode: mode, minDate: minDate, maxDate: maxDate, chooseText: chooseText)
             }
             if case let AnimatedFieldType.numberpicker(defaultNumber, minNumber, maxNumber, chooseText) = type {
                 setupPicker(defaultNumber: defaultNumber, minNumber: minNumber, maxNumber: maxNumber, chooseText: chooseText)
@@ -311,9 +311,9 @@ open class AnimatedField: UIView {
         layoutIfNeeded()
     }
     
-    private func setupDatePicker(minDate: Date?, maxDate: Date?, chooseText: String?) {
+    private func setupDatePicker(mode: UIDatePicker.Mode?, minDate: Date?, maxDate: Date?, chooseText: String?) {
         datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
+        datePicker?.datePickerMode = mode ?? .date
         datePicker?.maximumDate = maxDate
         datePicker?.minimumDate = minDate
         datePicker?.setValue(format.textColor, forKey: "textColor")

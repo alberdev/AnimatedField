@@ -369,10 +369,10 @@ AnimatedFieldType.url
 
 ### Date picker
 
-This type will show date picker view. Fill it with `default date`, `min date`, `max date`, `done label text`, `date format` (Example: "dd / MM / yyyy").
+This type will show date picker view. Fill it with  `mode`, `default date`, `min date`, `max date`, `done label text`, `date format` (Example: "dd / MM / yyyy").
 
 ```swift
-AnimatedFieldType.datepicker(Date?, Date?, Date?, String?, String?)
+AnimatedFieldType.datepicker(UIDatePicker.Mode?, Date?, Date?, Date?, String?, String?)
 ```
 >Typing regular expression: ".*" 
 

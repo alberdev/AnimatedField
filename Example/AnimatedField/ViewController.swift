@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         let maxDate = Date().addingTimeInterval(-13 * 365 * 24 * 60 * 60)
         let chooseText = "Choose"
         let dateFormat = "dd / MM / yyyy"
-        birthdateAnimatedField.type = .datepicker(defaultDate, minDate, maxDate, chooseText, dateFormat)
+        birthdateAnimatedField.type = .datepicker(.dateAndTime, defaultDate, minDate, maxDate, chooseText, dateFormat)
         birthdateAnimatedField.tag = 2
     
         numberAnimatedField.format = format
