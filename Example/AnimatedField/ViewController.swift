@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         multilineAnimatedField.format = format
         multilineAnimatedField.format.counterEnabled = true
         multilineAnimatedField.format.countDown = true
-        multilineAnimatedField.placeholder = "This is multiline"
+        multilineAnimatedField.attributedPlaceholder = NSAttributedString(string: "Place")
         multilineAnimatedField.dataSource = self
         multilineAnimatedField.delegate = self
         multilineAnimatedField.type = .multiline
@@ -174,7 +174,7 @@ extension ViewController: AnimatedFieldDataSource {
     func animatedFieldLimit(_ animatedField: AnimatedField) -> Int? {
         switch animatedField.tag {
         case 1: return 10
-        case 8: return 300
+        case 8: return 30
         default: return nil
         }
     }

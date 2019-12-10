@@ -68,7 +68,7 @@ extension AnimatedField: UITextViewDelegate {
         if newInput == "" { return true }
         
         // Check limits
-        return textView.text?.count ?? 0 + newInput.count <= limit
+        return textView.text?.count ?? 0 + newInput.count < limit
     }
     
     public func textViewDidChange(_ textView: UITextView) {
