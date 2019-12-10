@@ -67,6 +67,9 @@ public struct AnimatedFieldFormat {
     /// Set count down if counter is enabled
     public var countDown = false
     
+    /// Enable counter animation on change
+    public var counterAnimation = false
+    
     /// Highlight color when becomes active
     public var highlightColor: UIColor? = UIColor(displayP3Red: 0, green: 139/255, blue: 96/255, alpha: 1.0)
     

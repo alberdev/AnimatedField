@@ -171,6 +171,9 @@ format.counterEnabled = false
     
 /// Set count down if counter is enabled
 format.countDown = false
+
+/// Enable counter animation on change
+format.counterAnimation = false
     
 /// Highlight color when becomes active
 format.highlightColor: UIColor? = UIColor(displayP3Red: 0, green: 139/255, blue: 96/255, alpha: 1.0)

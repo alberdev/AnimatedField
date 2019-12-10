@@ -423,9 +423,11 @@ extension AnimatedField {
         let count = textView.text == attributedPlaceholder?.string ? (textView.text.count - (attributedPlaceholder?.string.count ?? 0)) : textView.text.count
         let value = (dataSource?.animatedFieldLimit(self) ?? 0) - count
         counterLabel.text = format.countDown ? "\(value)" : "\((textField.text?.count ?? 0) + 1)/\(dataSource?.animatedFieldLimit(self) ?? 0)"
-        counterLabel.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            self?.counterLabel.transform = .identity
+        if format.counterAnimation {
+            counterLabel.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.counterLabel.transform = .identity
+            }
         }
     }
     
