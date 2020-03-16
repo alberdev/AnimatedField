@@ -36,7 +36,7 @@ extension AnimatedField: UITextFieldDelegate {
         
         // Limits & Regular expressions
         let limit = dataSource?.animatedFieldLimit(self) ?? Int.max
-        let typingExpression = type.typingExpression
+        let typingExpression = "\(type.typingExpression)+"
         let regex = dataSource?.animatedFieldTypingMatches(self) ?? typingExpression
         
         // Check regular expression

@@ -219,7 +219,7 @@ open class AnimatedField: UIView {
     
     open var text: String? {
         get {
-            return textField.isHidden ? textView.text : textField.text
+            return textField.isHidden ? (textView.text == placeholder && textView.textColor == UIColor.lightGray.withAlphaComponent(0.8) ? "" : textView.text) : textField.text
         }
         set {
             textField.text = textField.isHidden ? nil : newValue
@@ -235,6 +235,11 @@ open class AnimatedField: UIView {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        updateCounterLabel()
     }
     
     private func commonInit() {
@@ -268,7 +273,7 @@ open class AnimatedField: UIView {
     
     private func setupTextView() {
         textView.delegate = self
-        textView.textColor = format.textColor
+        // textView.textColor = format.textColor
         textView.tag = tag
         textView.textContainerInset = .zero
         textView.contentInset = UIEdgeInsets(top: 13, left: -5, bottom: 6, right: 0)
@@ -420,7 +425,7 @@ extension AnimatedField {
     }
     
     func updateCounterLabel() {
-        let count = textView.text == attributedPlaceholder?.string ? (textView.text.count - (attributedPlaceholder?.string.count ?? 0)) : textView.text.count
+        let count = textView.text == attributedPlaceholder?.string && textView.textColor == UIColor.lightGray.withAlphaComponent(0.8) ? (textView.text.count - (attributedPlaceholder?.string.count ?? 0)) : textView.text.count
         let value = (dataSource?.animatedFieldLimit(self) ?? 0) - count
         counterLabel.text = format.countDown ? "\(value)" : "\((textField.text?.count ?? 0) + 1)/\(dataSource?.animatedFieldLimit(self) ?? 0)"
         if format.counterAnimation {
@@ -448,7 +453,7 @@ extension AnimatedField {
     }
     
     func beginTextViewPlaceholder() {
-        if textView.text == placeholder {
+        if textView.text == placeholder && textView.textColor == UIColor.lightGray.withAlphaComponent(0.8) {
             textView.text = ""
             textView.textColor = format.textColor
         }
