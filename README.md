@@ -410,6 +410,7 @@ AnimatedFieldType.multiline
 If you use `AnimatedField` I'd love to hear about it and feature your app here!
 
 <img src="Images/Apps/fashtime.png" width="50" height="50" valign="middle"> [FashTime](https://itunes.apple.com/app/fashtime-the-new-way/id1126538070?mt=8)
+<img src="Images/Apps/checkin.png" width="50" height="50" valign="middle"> [Check In Event Manager](https://itunes.apple.com/us/app/check-in-event-manager/id1430740368?ls=1&mt=8)
 
 ## Author
 
