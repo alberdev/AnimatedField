@@ -167,6 +167,10 @@ extension ViewController: AnimatedFieldDelegate {
     func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: String) {
         numberAnimatedField.text = value
     }
+    
+    func animatedFieldDidChange(_ animatedField: AnimatedField) {
+        print("text: \(animatedField.text ?? "")")
+    }
 }
 
 extension ViewController: AnimatedFieldDataSource {

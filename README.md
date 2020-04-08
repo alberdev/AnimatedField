@@ -289,6 +289,9 @@ func animatedField(_ animatedField: AnimatedField, didChangePickerValue value: S
 // Called when alert message is shown. 
 // Example: If you have disabled alert messages in field and want to show other kind of message in other view. This will use your own alert messages if you implemented datasource method or default ones if you used default types.
 func animatedField(_ animatedField: AnimatedField, didShowAlertMessage text: String)
+
+// Called when text field changed
+func animatedFieldDidChange(_ animatedField: AnimatedField)
 ```
 
 ### Extra

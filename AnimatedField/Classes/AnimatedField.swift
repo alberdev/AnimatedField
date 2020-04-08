@@ -363,6 +363,7 @@ open class AnimatedField: UIView {
     
     @IBAction func didChangeTextField(_ sender: UITextField) {
         updateCounterLabel()
+        delegate?.animatedFieldDidChange(self)
     }
     
     @objc func didChooseDatePicker() {
