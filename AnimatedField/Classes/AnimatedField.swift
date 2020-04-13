@@ -276,7 +276,7 @@ open class AnimatedField: UIView {
         // textView.textColor = format.textColor
         textView.tag = tag
         textView.textContainerInset = .zero
-        textView.contentInset = UIEdgeInsets(top: 13, left: -5, bottom: 6, right: 0)
+        textView.contentInset = UIEdgeInsets(top: 3, left: -5, bottom: 6, right: 0)
         textViewDidChange(textView)
         endTextViewPlaceholder()
     }
