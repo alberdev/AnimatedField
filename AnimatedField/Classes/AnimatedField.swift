@@ -154,6 +154,10 @@ open class AnimatedField: UIView {
         didSet { textField.keyboardType = keyboardType }
     }
 	
+    public var returnKeyType = UIReturnKeyType.default {
+        didSet { textField.returnKeyType = returnKeyType }
+    }
+    
 	public var keyboardToolbar: UIToolbar? {
 		didSet { textField.inputView = keyboardToolbar }
 	}
