@@ -18,17 +18,16 @@ extension AnimatedField: UITextViewDelegate {
         
         // Copy new character
         var newInput = text
-        
-        // Replace special characters in newInput
-        newInput = newInput.replacingOccurrences(of: "`", with: "")
-        newInput = newInput.replacingOccurrences(of: "^", with: "")
-        newInput = newInput.replacingOccurrences(of: "¨", with: "")
-        
-        // Replace special characters in textView
-        textView.text = textView.text?.replacingOccurrences(of: "`", with: "")
-        textView.text = textView.text?.replacingOccurrences(of: "^", with: "")
-        textView.text = textView.text?.replacingOccurrences(of: "¨", with: "")
-        
+
+        let invalidCharacters = format.invalidCharacters.map { String($0) }
+        for invalidCharacter in invalidCharacters {
+            // Replace special characters in newInput
+            newInput = newInput.replacingOccurrences(of: invalidCharacter, with: "")
+
+            // Replace special characters in textView
+            textView.text = textView.text?.replacingOccurrences(of: invalidCharacter, with: "")
+        }
+
         // Apply uppercased & lowercased if available
         if uppercased { newInput = newInput.uppercased() }
         if lowercased { newInput = newInput.lowercased() }
