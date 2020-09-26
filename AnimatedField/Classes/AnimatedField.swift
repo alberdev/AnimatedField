@@ -149,6 +149,14 @@ open class AnimatedField: UIView {
     /// Lowercased field format
     public var lowercased = false
     
+    /// Auto-Capitalization type
+    public var autocapitalizationType: UITextAutocapitalizationType = .none {
+        didSet {
+            textField.autocapitalizationType = autocapitalizationType
+            textView.autocapitalizationType = autocapitalizationType
+        }
+    }
+
     /// Keyboard type
     public var keyboardType = UIKeyboardType.alphabet {
         didSet { textField.keyboardType = keyboardType }
