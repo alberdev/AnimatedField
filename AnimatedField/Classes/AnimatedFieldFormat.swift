@@ -9,10 +9,13 @@
 import Foundation
 
 public struct AnimatedFieldFormat {
-    
+
+    /// String of characters to block/filter from input
+    public var invalidCharacters = "`^¨"
+
     /// Title always visible
     public var titleAlwaysVisible = false
-    
+
     /// Font for title label
     public var titleFont = UIFont.systemFont(ofSize: 13, weight: .regular)
     
