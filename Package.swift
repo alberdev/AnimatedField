@@ -7,14 +7,13 @@ let package = Package(
     products: [
         .library(
             name: "AnimatedField",
-            targets: ["AnimatedField"]),
+            targets: ["AnimatedField"])
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "AnimatedField",
             dependencies: [],
-            path: "AnimatedField",)
+            path: "AnimatedField")
     ]
 )
