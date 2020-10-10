@@ -49,6 +49,9 @@ open class AnimatedField: UIView {
     private var numberPicker: UIPickerView?
     var numberOptions = [Int]()
     
+    private var stringPicker: UIPickerView?
+    var stringOptions = [String]()
+    
     var formatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.locale = Locale.current // USA: Locale(identifier: "en_US")
@@ -115,7 +118,10 @@ open class AnimatedField: UIView {
                 setupDatePicker(mode: mode, minDate: minDate, maxDate: maxDate, chooseText: chooseText)
             }
             if case let AnimatedFieldType.numberpicker(defaultNumber, minNumber, maxNumber, chooseText) = type {
-                setupPicker(defaultNumber: defaultNumber, minNumber: minNumber, maxNumber: maxNumber, chooseText: chooseText)
+                setupNumberPicker(defaultNumber: defaultNumber, minNumber: minNumber, maxNumber: maxNumber, chooseText: chooseText)
+            }
+            if case let AnimatedFieldType.stringpicker(strings, chooseText) = type {
+                setupStringPicker(strings: strings, chooseText: chooseText)
             }
             if case AnimatedFieldType.price = type {
                 keyboardType = .decimalPad
@@ -329,8 +335,7 @@ open class AnimatedField: UIView {
         textField.inputView = datePicker
     }
     
-    private func setupPicker(defaultNumber: Int, minNumber: Int, maxNumber: Int, chooseText: String?) {
-        
+    private func setupNumberPicker(defaultNumber: Int, minNumber: Int, maxNumber: Int, chooseText: String?) {
         numberPicker = UIPickerView()
         numberPicker?.dataSource = self
         numberPicker?.delegate = self
@@ -345,6 +350,24 @@ open class AnimatedField: UIView {
 		
         textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = numberPicker
+    }
+    
+    private func setupStringPicker(strings: [String], chooseText: String?) {
+        stringPicker = UIPickerView()
+        stringPicker?.dataSource = self
+        stringPicker?.delegate = self
+        stringPicker?.setValue(format.textColor, forKey: "textColor")
+        
+        stringOptions += strings
+        stringPicker?.selectRow(0, inComponent:0, animated:false)
+        if !stringOptions.isEmpty {
+            stringPicker?.selectRow(0, inComponent:0, animated:false)
+        }
+        
+        let toolBar = UIToolbar(target: self, selector: #selector(didChooseStringPicker))
+        
+        textField.inputAccessoryView = accessoryView ?? toolBar
+        textField.inputView = stringPicker
     }
     
     open override func becomeFirstResponder() -> Bool {
@@ -374,6 +397,11 @@ open class AnimatedField: UIView {
     
     @objc func didChooseNumberPicker() {
 //        textField.text = numberPicker
+        _ = resignFirstResponder()
+    }
+    
+    @objc func didChooseStringPicker() {
+//        textField.text = stringPicker
         _ = resignFirstResponder()
     }
 }
