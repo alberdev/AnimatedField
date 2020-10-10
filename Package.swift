@@ -10,13 +10,18 @@ let package = Package(
     products: [
         .library(
             name: "AnimatedField",
-            targets: ["AnimatedField"])
+            targets: ["AnimatedField"]
+        )
     ],
     dependencies: [],
     targets: [
         .target(
             name: "AnimatedField",
             dependencies: [],
-            path: "AnimatedField")
+            path: "AnimatedField",
+            resources: [
+                .copy("AnimatedField.xib")
+            ]
+        )
     ]
 )
