@@ -5,7 +5,7 @@
 //  Created by Alberto Aznar de los Ríos on 12/04/2019.
 //
 
-import Foundation
+import UIKit
 
 extension AnimatedField: UIPickerViewDataSource, UIPickerViewDelegate {
     

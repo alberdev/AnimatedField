@@ -4,6 +4,9 @@ import PackageDescription
 
 let package = Package(
     name: "AnimatedField",
+    platforms: [
+        .iOS(.v12)
+    ],
     products: [
         .library(
             name: "AnimatedField",

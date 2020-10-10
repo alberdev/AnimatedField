@@ -6,7 +6,7 @@
 //  Copyright © 2019 FashTime Ltd. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIView {
     
