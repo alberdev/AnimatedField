@@ -6,12 +6,12 @@
 //  Copyright © 2019 FashTime Ltd. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIView {
     
     func fromNib<T : UIView>() -> T? {
-        guard let contentView = Bundle(for: type(of: self)).loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?.first as? T else {
+        guard let contentView = Bundle.module.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?.first as? T else {
             // xib not loaded, or its top view is of the wrong type
             return nil
         }
