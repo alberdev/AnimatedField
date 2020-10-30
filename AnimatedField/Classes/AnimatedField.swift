@@ -319,6 +319,11 @@ open class AnimatedField: UIView {
     private func setupDatePicker(mode: UIDatePicker.Mode?, minDate: Date?, maxDate: Date?, chooseText: String?) {
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = mode ?? .date
+        if #available(iOS 13.4, *) {
+            datePicker?.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
         datePicker?.maximumDate = maxDate
         datePicker?.minimumDate = minDate
         datePicker?.setValue(format.textColor, forKey: "textColor")
