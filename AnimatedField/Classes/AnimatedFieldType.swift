@@ -28,7 +28,7 @@ public enum AnimatedFieldType {
     
     var typingExpression: String {
         switch self {
-        case .email: return "[A-Z0-9a-z@_\\.]"
+        case .email: return "[A-Z0-9a-z@_\\.\\-]"
         case .username: return "[A-Za-z0-9_.]"
         case .price: return "[0-9\(decimal)]"
         default: return ".*"
