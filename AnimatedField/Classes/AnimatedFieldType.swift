@@ -28,7 +28,7 @@ public enum AnimatedFieldType {
     
     var typingExpression: String {
         switch self {
-        case .email: return "[A-Z0-9a-z@_\\.]"
+        case .email: return "[A-Z0-9a-z@_\\.\\-]"
         case .username: return "[A-Za-z0-9_.]"
         case .price: return "[0-9\(decimal)]"
         default: return ".*"
@@ -37,7 +37,7 @@ public enum AnimatedFieldType {
     
     var validationExpression: String {
         switch self {
-        case .email: return "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        case .email: return "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         case .username(let min, let max): return "[A-Za-z0-9_.]{\(min),\(max)}"
         case .password(let min, let max): return ".{\(min),\(max)}"
         case .price(_, let max): return "^(?=.*[1-9])([1-9]\\d*(?:\(decimal)\\d{1,\(max)})?|(?:0\(decimal)\\d{1,\(max)}))$"

@@ -154,6 +154,10 @@ open class AnimatedField: UIView {
         didSet { textField.keyboardType = keyboardType }
     }
 	
+    public var returnKeyType = UIReturnKeyType.default {
+        didSet { textField.returnKeyType = returnKeyType }
+    }
+    
 	public var keyboardToolbar: UIToolbar? {
 		didSet { textField.inputView = keyboardToolbar }
 	}
@@ -317,11 +321,20 @@ open class AnimatedField: UIView {
     }
     
     private func setupDatePicker(mode: UIDatePicker.Mode?, minDate: Date?, maxDate: Date?, chooseText: String?) {
-        datePicker = UIDatePicker()
+        datePicker = UIDatePicker(frame: .zero)
         datePicker?.datePickerMode = mode ?? .date
         datePicker?.maximumDate = maxDate
         datePicker?.minimumDate = minDate
         datePicker?.setValue(format.textColor, forKey: "textColor")
+        if #available(iOS 13.4, *) {
+            if #available(iOS 14.0, *) {
+                datePicker?.preferredDatePickerStyle = .inline
+            } else {
+                datePicker?.preferredDatePickerStyle = .wheels
+            }
+        } else {
+            // Fallback on earlier versions
+        }
         
         let toolBar = UIToolbar(target: self, selector: #selector(didChooseDatePicker))
 		
@@ -346,7 +359,13 @@ open class AnimatedField: UIView {
         textField.inputAccessoryView = accessoryView ?? toolBar
         textField.inputView = numberPicker
     }
-    
+
+    open override var isFirstResponder: Bool {
+        get {
+            return textField.isFirstResponder
+        }
+    }
+
     open override func becomeFirstResponder() -> Bool {
         textField.becomeFirstResponder()
         return super.becomeFirstResponder()
