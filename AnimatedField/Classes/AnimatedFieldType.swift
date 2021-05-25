@@ -16,9 +16,11 @@ public enum AnimatedFieldType {
     case password(Int, Int) // min, max
     case price(Double, Int) // max price, max decimals
     case url
-    case datepicker(UIDatePicker.Mode?, Date?, Date?, Date?, String?, String?) // mode, default date, min date, max date, choose text, date format
+    case datepicker(UIDatePicker.Mode?, Date?, Date?, Date?, String?, String?, UIColor?, Bool) // mode, default date, min date, max date, choose text, date format
     case numberpicker(Int, Int, Int, String?) // default number, min number, max number, choose text
     case multiline
+    case numeric
+    case iranianCellphoneNumber
     
     var decimal: String {
         var separator = Locale.current.decimalSeparator ?? "\\."
@@ -31,6 +33,8 @@ public enum AnimatedFieldType {
         case .email: return "[A-Z0-9a-z@_\\.]"
         case .username: return "[A-Za-z0-9_.]"
         case .price: return "[0-9\(decimal)]"
+        case .numeric: return "[0-9]"
+        case .iranianCellphoneNumber: return "[0-9]"
         default: return ".*"
         }
     }
@@ -42,6 +46,8 @@ public enum AnimatedFieldType {
         case .password(let min, let max): return ".{\(min),\(max)}"
         case .price(_, let max): return "^(?=.*[1-9])([1-9]\\d*(?:\(decimal)\\d{1,\(max)})?|(?:0\(decimal)\\d{1,\(max)}))$"
         case .url: return "https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,}"
+        case .numeric: return "[0-9]"
+        case .iranianCellphoneNumber: return "^(0)?9\\d{9}$"
         default: return ".*"
         }
     }
@@ -53,6 +59,8 @@ public enum AnimatedFieldType {
         case .password: return "Password is not valid!"
         case .price: return "Price is not valid!"
         case .url: return "Url is not valid!"
+        case .numeric: return "Number is not valid!"
+        case .iranianCellphoneNumber: return "Cellphone number is not valid!"
         default: return ""
         }
     }

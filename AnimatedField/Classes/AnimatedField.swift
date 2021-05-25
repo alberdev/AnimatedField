@@ -44,6 +44,7 @@ open class AnimatedField: UIView {
     private var datePicker: UIDatePicker?
     private var initialDate: Date?
     private var dateFormat: String?
+    private var isPersian: Bool = true
     
     /// Picker values
     private var numberPicker: UIPickerView?
@@ -109,10 +110,10 @@ open class AnimatedField: UIView {
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
         didSet {
-            if case let AnimatedFieldType.datepicker(mode, defaultDate, minDate, maxDate, chooseText, format) = type {
+            if case let AnimatedFieldType.datepicker(mode, defaultDate, minDate, maxDate, chooseText, format, bgColor, isPersian) = type {
                 initialDate = defaultDate
                 dateFormat = format
-                setupDatePicker(mode: mode, minDate: minDate, maxDate: maxDate, chooseText: chooseText)
+                setupDatePicker(mode: mode, minDate: minDate, maxDate: maxDate, chooseText: chooseText, bgColor: bgColor, isPersian: isPersian)
             }
             if case let AnimatedFieldType.numberpicker(defaultNumber, minNumber, maxNumber, chooseText) = type {
                 setupPicker(defaultNumber: defaultNumber, minNumber: minNumber, maxNumber: maxNumber, chooseText: chooseText)
@@ -316,7 +317,7 @@ open class AnimatedField: UIView {
         layoutIfNeeded()
     }
     
-    private func setupDatePicker(mode: UIDatePicker.Mode?, minDate: Date?, maxDate: Date?, chooseText: String?) {
+    private func setupDatePicker(mode: UIDatePicker.Mode?, minDate: Date?, maxDate: Date?, chooseText: String?, bgColor: UIColor?, isPersian: Bool = true) {
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = mode ?? .date
         if #available(iOS 13.4, *) {
@@ -324,9 +325,18 @@ open class AnimatedField: UIView {
         } else {
             // Fallback on earlier versions
         }
+        self.isPersian = isPersian
         datePicker?.maximumDate = maxDate
         datePicker?.minimumDate = minDate
         datePicker?.setValue(format.textColor, forKey: "textColor")
+        if isPersian {
+            datePicker?.datePickerMode = .date
+            datePicker?.calendar = Calendar(identifier: .persian)
+            datePicker?.locale = Locale(identifier: "fa_IR")
+        }
+        if let bgcolor = bgColor {
+            datePicker?.backgroundColor = bgcolor
+        }
         
         let toolBar = UIToolbar(target: self, selector: #selector(didChooseDatePicker))
 		
@@ -371,9 +381,9 @@ open class AnimatedField: UIView {
         delegate?.animatedFieldDidChange(self)
     }
     
-    @objc func didChooseDatePicker() {
+    @objc func didChooseDatePicker(sender: Any) {
         let date = datePicker?.date ?? initialDate
-        textField.text = date?.format(dateFormat: dateFormat ?? "dd / MM / yyyy")
+        textField.text = date?.format(dateFormat: dateFormat ?? "dd / MM / yyyy", isPersian: isPersian)
         _ = resignFirstResponder()
     }
     
