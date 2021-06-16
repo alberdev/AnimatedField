@@ -17,8 +17,10 @@ extension AnimatedField: UITextFieldDelegate {
             return shouldChange
         }
         
+        let sstring = string.toEnglish()
+        
         // Copy new character
-        var newInput = string
+        var newInput = sstring
         
         // Replace special characters in newInput
         newInput = newInput.replacingOccurrences(of: "`", with: "")
@@ -43,7 +45,7 @@ extension AnimatedField: UITextFieldDelegate {
         if !newInput.isValidWithRegEx(regex) && newInput != "" { return false }
         
         // Change textfield in manual mode in case of changing newInput. Check limits also
-        if newInput != string {
+        if newInput != sstring {
             textField.text = textField.text?.count ?? 0 + newInput.count <= limit ? "\(textField.text ?? "")\(newInput)" : textField.text
             return false
         }
